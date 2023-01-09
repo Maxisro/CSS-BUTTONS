@@ -15,6 +15,7 @@ body {
 
 .container {
 	width: 90%;
+	border-radius: 4px;
 	background: #aa4b6b;
 	/* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
@@ -24,19 +25,32 @@ body {
 
 }
 
+.title {
+	display: block;
+	text-align: center;
+	margin: 5px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .7rem;
+
+}
+
 .buttons-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
+
 }
 
 .btn {
-	margin: 50px;
+	margin: 30px;
 }
 
+/* ------------------------------------------------------------------------------------------ */
 .button-hover-effect-1 {
 	text-decoration: none;
+	text-transform: uppercase;
 	color: #262626;
 	font-family: sans-serif;
 	font-size: 35px;
@@ -44,7 +58,7 @@ body {
 	padding: 20px 40px;
 	position: relative;
 	overflow: hidden;
-	z-index: 10;
+	z-index: 2;
 
 }
 
@@ -53,10 +67,10 @@ body {
 	position: absolute;
 	left: 0;
 	top: 0;
-	background-color: rgba(255, 255, 0, .4);
+	background-color: rgb(255, 255,0);
 	height: 100%;
 	width: 100%;
-	z-index: 5;
+	z-index: -1;
 	transform-origin: bottom left;
 	transform: rotate(-90deg);
 	transition: transform 1s;
@@ -65,3 +79,5 @@ body {
 .button-hover-effect-1:hover:before {
 	transform: rotate(0deg);
 }
+
+/* ------------------------------------------------------------------------------------------ */
