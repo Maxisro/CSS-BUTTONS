@@ -1,0 +1,67 @@
+body {
+	background: #bdc3c7;
+}
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.container {
+	width: 90%;
+	background: #aa4b6b;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.buttons-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.btn {
+	margin: 50px;
+}
+
+.button-hover-effect-1 {
+	text-decoration: none;
+	color: #262626;
+	font-family: sans-serif;
+	font-size: 35px;
+	border: 5px solid #262626;
+	padding: 20px 40px;
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+
+}
+
+.button-hover-effect-1:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(255, 255, 0, .4);
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+	transform-origin: bottom left;
+	transform: rotate(-90deg);
+	transition: transform 1s;
+}
+
+.button-hover-effect-1:hover:before {
+	transform: rotate(0deg);
+}
