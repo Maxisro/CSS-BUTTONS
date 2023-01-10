@@ -18,14 +18,12 @@ body {
 .container {
 	width: 90%;
 	border-radius: 4px;
-	background: #D3CCE3;
+	background: #8e9eab;
 	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+	background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+	background: linear-gradient(to bottom, #eef2f3, #8e9eab);
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 
 }
 
@@ -42,13 +40,14 @@ body {
 .buttons-container {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
 
 }
 
 .btn {
-	margin: 30px;
+	margin: 20px;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #262626;
@@ -187,10 +186,10 @@ body {
 	transition: all .5s;
 }
 
-.button-hover-effect-4:hover{
+.button-hover-effect-4:hover {
 	font-weight: 900;
-	letter-spacing: 10px;
-	border: 7px solid #e1332d;
+	letter-spacing: 7px;
+	border: 5px solid #e1332d;
 }
 
 /* №5------------------------------------------------------------------------------------------ */
@@ -217,7 +216,35 @@ body {
 	justify-content: center;
 }
 
-.button-hover-effect-5:hover:before{
+.button-hover-effect-5:hover:before {
 	transform: translateY(0)
+}
 
+/* №6------------------------------------------------------------------------------------------ */
+.button-hover-effect-6 {
+	color: white;
+	border: 3px solid white;
+	transition: all 1s;
+}
+
+.button-hover-effect-6:hover{
+	background-color: #f44336;
+}
+
+.button-hover-effect-6::before{
+	content: '';
+	background-color: white;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	transform: translateX(-100%) rotate(45deg);
+	transition: all .6s;
+
+}
+
+.button-hover-effect-6:hover::before{
+	transform: translateX(100%) rotate(45deg);
+	
 }
