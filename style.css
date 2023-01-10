@@ -45,31 +45,30 @@ body {
 
 .btn {
 	margin: 30px;
-}
-
-/* ------------------------------------------------------------------------------------------ */
-.button-hover-effect-1 {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #262626;
 	font-family: sans-serif;
 	font-size: 35px;
-	border: 5px solid #262626;
+	border: 3px solid #262626;
 	padding: 20px 40px;
 	position: relative;
 	overflow: hidden;
 	z-index: 2;
-
+	border-radius: 10px;
 }
+
+/* №1------------------------------------------------------------------------------------------ */
 
 .button-hover-effect-1:before {
 	content: '';
 	position: absolute;
 	left: 0;
 	top: 0;
-	background-color: rgb(255, 255,0);
+	background-color: rgb(255, 255, 0);
 	height: 100%;
 	width: 100%;
+
 	z-index: -1;
 	transform-origin: bottom left;
 	transform: rotate(-90deg);
@@ -80,4 +79,48 @@ body {
 	transform: rotate(0deg);
 }
 
-/* ------------------------------------------------------------------------------------------ */
+/* №2------------------------------------------------------------------------------------------ */
+.button-hover-effect-2 {
+	color: #351435;
+	border-color: #351435;
+	transition: all 1s;
+
+}
+
+.button-hover-effect-2:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #351435;
+	z-index: -1;
+	transform: translateX(-100%);
+	transition: all 1s;
+
+}
+.button-hover-effect-2::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #35014b;
+	z-index: -1;
+	transform: translateX(100%);
+	transition: all 1s;
+
+}
+
+.button-hover-effect-2:hover:before {
+	transform: translateX(-50%);
+}
+.button-hover-effect-2:hover::after {
+	transform: translateX(49%);
+}
+
+.button-hover-effect-2:hover {
+	color: white;
+}
