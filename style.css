@@ -301,12 +301,13 @@ body {
 	height: 100%;
 	width: 100%;
 	background-color: #fffa65;
-	color:#262626;
+	color: #262626;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: all .5s;
 }
+
 .button-hover-effect-7::after {
 	content: 'Hover Me';
 	position: absolute;
@@ -315,18 +316,47 @@ body {
 	height: 100%;
 	width: 100%;
 	background-color: #fffa65;
-	color:#262626;
+	color: #262626;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: all .5s;
 	transform: translate(-100%, 100%);
 }
-.button-hover-effect-7:hover::before{
+
+.button-hover-effect-7:hover::before {
 	transform: translate(100%, -100%);
 
 }
-.button-hover-effect-7:hover::after{
+
+.button-hover-effect-7:hover::after {
 	transform: translate(0%, 0%);
 
+}
+
+/* №8------------------------------------------------------------------------------------------ */
+.button-hover-effect-8 {
+	transition: all .5s;
+}
+
+.button-hover-effect-8::before {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #262626;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: scale(5);
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.button-hover-effect-8:hover::before {
+	transform: scale(1);
+	opacity: 1;
 }
