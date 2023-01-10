@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+
 body {
 	background: #bdc3c7;
 }
@@ -16,12 +18,14 @@ body {
 .container {
 	width: 90%;
 	border-radius: 4px;
-	background: #aa4b6b;
+	background: #D3CCE3;
 	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+	background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+	background: linear-gradient(to bottom, #E9E4F0, #D3CCE3);
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 
 }
 
@@ -29,7 +33,7 @@ body {
 	display: block;
 	text-align: center;
 	margin: 5px;
-	color: #fff;
+	color: rgb(16, 15, 15);
 	text-transform: uppercase;
 	letter-spacing: .7rem;
 
@@ -170,4 +174,21 @@ body {
 
 .button-hover-effect-3:hover {
 	color: white;
+}
+
+/* №4------------------------------------------------------------------------------------------ */
+.button-hover-effect-4 {
+	color: #e1332d;
+	transition: all 1s;
+	border-color: #e1332d;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	letter-spacing: -2px;
+	transition: all .5s;
+}
+
+.button-hover-effect-4:hover{
+	font-weight: 900;
+	letter-spacing: 10px;
+	border: 7px solid #e1332d;
 }
