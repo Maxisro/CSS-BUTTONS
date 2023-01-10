@@ -382,14 +382,61 @@ body {
 	border-radius: 0 0 50% 50%;
 	height: 0;
 	transition: all .5s;
-
 }
 
 .button-hover-effect-9:hover::before {
 	height: 190%;
-
 }
 
 .button-hover-effect-9:hover {
 	color: white;
+}
+
+/* №10------------------------------------------------------------------------------------------ */
+.button-hover-effect-10 {
+	background-color: #f1c40f;
+	color: white;
+	overflow: visible;
+	border-radius: 0%;
+}
+
+.button-hover-effect-10::before {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #2ce771;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotateX(270deg);
+	transform-origin: top;
+	transition: all .5s;
+	border-bottom: 1px solid #262626;
+	border-right: 1px solid #262626;
+}
+
+.button-hover-effect-10::after {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotateX(270deg);
+	transform-origin: top;
+	transition: all .5s;
+	border-bottom: 1px solid #262626;
+	border-right: 1px solid #262626;
+	transition-delay: .25s;
+}
+
+.button-hover-effect-10:hover::before, .button-hover-effect-10:hover::after {
+	transform: rotateX(0deg);
 }
