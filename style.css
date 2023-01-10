@@ -2,6 +2,8 @@
 
 body {
 	background: #bdc3c7;
+	font-family: 'Roboto', sans-serif;
+
 }
 
 .wrapper {
@@ -44,7 +46,7 @@ body {
 	justify-content: space-between;
 	align-items: center; */
 	display: grid;
-	gap: 20px;
+	gap: 30px;
 	grid-template-columns: repeat(4, 1fr);
 	padding: 15px;
 
@@ -59,7 +61,8 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #262626;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
+
 	font-size: 35px;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -103,7 +106,7 @@ body {
 
 /* №1------------------------------------------------------------------------------------------ */
 
-.button-hover-effect-1:before {
+.button-effect-1:before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -118,19 +121,19 @@ body {
 	transition: transform 1s;
 }
 
-.button-hover-effect-1:hover:before {
+.button-effect-1:hover:before {
 	transform: rotate(0deg);
 }
 
 /* №2------------------------------------------------------------------------------------------ */
-.button-hover-effect-2 {
+.button-effect-2 {
 	color: #351435;
 	border-color: #351435;
 	transition: all 1s;
 
 }
 
-.button-hover-effect-2:before {
+.button-effect-2:before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -144,7 +147,7 @@ body {
 
 }
 
-.button-hover-effect-2::after {
+.button-effect-2::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -158,25 +161,25 @@ body {
 
 }
 
-.button-hover-effect-2:hover:before {
+.button-effect-2:hover:before {
 	transform: translateX(-50%);
 }
 
-.button-hover-effect-2:hover::after {
+.button-effect-2:hover::after {
 	transform: translateX(49%);
 }
 
-.button-hover-effect-2:hover {
+.button-effect-2:hover {
 	color: white;
 }
 
 /* №3------------------------------------------------------------------------------------------ */
-.button-hover-effect-3 {
+.button-effect-3 {
 	color: #262626;
 	transition: all 1s;
 }
 
-.button-hover-effect-3::before {
+.button-effect-3::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -189,7 +192,7 @@ body {
 	transform: rotateX(90deg);
 }
 
-.button-hover-effect-3::after {
+.button-effect-3::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -202,44 +205,43 @@ body {
 	transform: rotateY(90deg);
 }
 
-.button-hover-effect-3:hover::before {
+.button-effect-3:hover::before {
 	transform: rotateX(0deg);
 }
 
-.button-hover-effect-3:hover::after {
+.button-effect-3:hover::after {
 	transform: rotateY(0deg);
 }
 
-.button-hover-effect-3:hover {
+.button-effect-3:hover {
 	color: white;
 }
 
 /* №4------------------------------------------------------------------------------------------ */
-.button-hover-effect-4 {
+.button-effect-4 {
 	color: #e1332d;
 	transition: all 1s;
 	border-color: #e1332d;
-	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	letter-spacing: -2px;
 	transition: all .5s;
 }
 
-.button-hover-effect-4:hover {
+.button-effect-4:hover {
 	font-weight: 900;
 	letter-spacing: 7px;
 	border: 5px solid #e1332d;
 }
 
 /* №5------------------------------------------------------------------------------------------ */
-.button-hover-effect-5 {
+.button-effect-5 {
 	color: white;
 	border: 3px solid #fff;
 
 	transition: all 1s;
 }
 
-.button-hover-effect-5::before {
+.button-effect-5::before {
 	content: 'YEAH!';
 	color: white;
 	position: absolute;
@@ -255,22 +257,22 @@ body {
 	justify-content: center;
 }
 
-.button-hover-effect-5:hover:before {
+.button-effect-5:hover:before {
 	transform: translateY(0)
 }
 
 /* №6------------------------------------------------------------------------------------------ */
-.button-hover-effect-6 {
+.button-effect-6 {
 	color: white;
 	border: 3px solid white;
 	transition: all 1s;
 }
 
-.button-hover-effect-6:hover {
+.button-effect-6:hover {
 	background-color: #f44336;
 }
 
-.button-hover-effect-6::before {
+.button-effect-6::before {
 	content: '';
 	background-color: white;
 	top: 0;
@@ -283,19 +285,19 @@ body {
 
 }
 
-.button-hover-effect-6:hover::before {
+.button-effect-6:hover::before {
 	transform: translateX(100%) rotate(45deg);
 
 }
 
 /* №7------------------------------------------------------------------------------------------ */
-.button-hover-effect-7 {
+.button-effect-7 {
 	background-color: #262626;
 	color: transparent;
 }
 
-.button-hover-effect-7::before {
-	content: 'Hover Me';
+.button-effect-7::before {
+	content: 'button-7';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -309,8 +311,8 @@ body {
 	transition: all .5s;
 }
 
-.button-hover-effect-7::after {
-	content: 'Hover Me';
+.button-effect-7::after {
+	content: 'button-7';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -325,23 +327,23 @@ body {
 	transform: translate(-100%, 100%);
 }
 
-.button-hover-effect-7:hover::before {
+.button-effect-7:hover::before {
 	transform: translate(100%, -100%);
 
 }
 
-.button-hover-effect-7:hover::after {
+.button-effect-7:hover::after {
 	transform: translate(0%, 0%);
 
 }
 
 /* №8------------------------------------------------------------------------------------------ */
-.button-hover-effect-8 {
+.button-effect-8 {
 	transition: all .5s;
 }
 
-.button-hover-effect-8::before {
-	content: 'Hover Me';
+.button-effect-8::before {
+	content: 'button-8';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -357,20 +359,20 @@ body {
 	transition: all 0.5s;
 }
 
-.button-hover-effect-8:hover::before {
+.button-effect-8:hover::before {
 	transform: scale(1);
 	opacity: 1;
 }
 
 /* №9------------------------------------------------------------------------------------------ */
-.button-hover-effect-9 {
+.button-effect-9 {
 	border: 2px solid tomato;
 	background: none;
 	color: tomato;
 	transition: all .5s;
 }
 
-.button-hover-effect-9::before {
+.button-effect-9::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -384,24 +386,24 @@ body {
 	transition: all .5s;
 }
 
-.button-hover-effect-9:hover::before {
+.button-effect-9:hover::before {
 	height: 190%;
 }
 
-.button-hover-effect-9:hover {
+.button-effect-9:hover {
 	color: white;
 }
 
 /* №10------------------------------------------------------------------------------------------ */
-.button-hover-effect-10 {
+.button-effect-10 {
 	background-color: #f1c40f;
 	color: white;
 	overflow: visible;
 	border-radius: 0%;
 }
 
-.button-hover-effect-10::before {
-	content: 'Hover Me';
+.button-effect-10::before {
+	content: 'button-10';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -418,8 +420,8 @@ body {
 	border-right: 1px solid #262626;
 }
 
-.button-hover-effect-10::after {
-	content: 'Hover Me';
+.button-effect-10::after {
+	content: 'button-10';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -437,6 +439,134 @@ body {
 	transition-delay: .25s;
 }
 
-.button-hover-effect-10:hover::before, .button-hover-effect-10:hover::after {
+.button-effect-10:hover::before,
+.button-effect-10:hover::after {
 	transform: rotateX(0deg);
+}
+
+/* №11------------------------------------------------------------------------------------------ */
+.button-effect-11 {
+	color: transparent;
+	border-color: #ff0;
+}
+
+.button-effect-11::before {
+	content: 'button-11';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #363636;
+	color: #ff0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 1s;
+}
+
+.button-effect-11:hover::before {
+	left: 100%;
+	opacity: 0;
+	transform: scale(0) rotateY(360deg);
+}
+
+.button-effect-11::after {
+	content: 'button-11';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: #363636;
+	color: #ff0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0) rotateY(0);
+	opacity: 0;
+	transition: all 1s;
+}
+
+.button-effect-11:hover::after {
+	left: 0;
+	opacity: 1;
+	transform: scale(1) rotateY(360deg);
+}
+
+/* №12------------------------------------------------------------------------------------------ */
+.button-effect-12 {
+	display: block;
+	overflow: visible;
+	text-align: center;
+	line-height: 40px;
+	width: 320px;
+	height: 40px;
+	color: #ff0;
+	background-color: transparent;
+	border-color: transparent;
+	transition: all .5s;
+}
+
+.button-effect-12::before,
+.button-effect-12::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: #ff0;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	transition: all .3s;
+	z-index: -1;
+	opacity: 0;
+}
+
+.button-effect-12::before {
+	left: 0;
+	box-shadow: -100px 0 0 #ff0;
+}
+
+.button-effect-12::after {
+	right: 0;
+	box-shadow: 100px 0 0 #ff0;
+
+}
+
+.button-effect-12:hover::before {
+	left: 50%;
+	box-shadow: 30px 0 0 #ff0;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 1;
+}
+
+.button-effect-12:hover::after {
+	right: 50%;
+	box-shadow: -30px 0 0 #ff0;
+	transform: translateX(50%) translateY(-50%);
+	opacity: 1;
+}
+
+.button-effect-12 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ff0;
+	border-radius: 10px;
+	transform: scale(0);
+	transition: all 0.3s;
+	z-index: -1;
+}
+
+.button-effect-12:hover span {
+	transform: scale(1);
+	transition-delay: 0.4s;
+}
+
+.button-effect-12:hover {
+	color: #262626;
+	transition-delay: .4s;
 }
