@@ -38,16 +38,24 @@ body {
 }
 
 .buttons-container {
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
+	align-items: center; */
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 15px;
 
 }
 
 .btn {
-	margin: 20px;
+	/* margin: 20px; */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #262626;
@@ -60,6 +68,36 @@ body {
 	overflow: hidden;
 	z-index: 2;
 	border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		width: 95%;
+	}
+
+	.buttons-container {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+		padding: 10px;
+
+	}
+
+	.btn {
+		font-size: 20px;
+		padding: 10px 20px;
+		text-align: center;
+
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.buttons-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.title {
+		font-size: 1.2em;
+	}
 }
 
 /* №1------------------------------------------------------------------------------------------ */
@@ -227,11 +265,11 @@ body {
 	transition: all 1s;
 }
 
-.button-hover-effect-6:hover{
+.button-hover-effect-6:hover {
 	background-color: #f44336;
 }
 
-.button-hover-effect-6::before{
+.button-hover-effect-6::before {
 	content: '';
 	background-color: white;
 	top: 0;
@@ -244,7 +282,51 @@ body {
 
 }
 
-.button-hover-effect-6:hover::before{
+.button-hover-effect-6:hover::before {
 	transform: translateX(100%) rotate(45deg);
-	
+
+}
+
+/* №7------------------------------------------------------------------------------------------ */
+.button-hover-effect-7 {
+	background-color: #262626;
+	color: transparent;
+}
+
+.button-hover-effect-7::before {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #fffa65;
+	color:#262626;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .5s;
+}
+.button-hover-effect-7::after {
+	content: 'Hover Me';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #fffa65;
+	color:#262626;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .5s;
+	transform: translate(-100%, 100%);
+}
+.button-hover-effect-7:hover::before{
+	transform: translate(100%, -100%);
+
+}
+.button-hover-effect-7:hover::after{
+	transform: translate(0%, 0%);
+
 }
