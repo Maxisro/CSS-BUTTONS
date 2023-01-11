@@ -6,19 +6,37 @@ body {
 
 }
 
+
 .wrapper {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	/* margin-top: 20px;
+	margin-bottom: 20px; */
 
 }
-
+.header{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+	background-color: rgba(11, 11, 11, 0.3);
+}
+.logo img{
+	contain: layout;
+	width: 100px;
+	height: 100px;
+	
+}
 .container {
 	width: 90%;
+	margin-top: 60px;
+
 	border-radius: 4px;
 	background: #8e9eab;
 	/* fallback for old browsers */
@@ -49,7 +67,6 @@ body {
 	gap: 30px;
 	grid-template-columns: repeat(4, 1fr);
 	padding: 15px;
-
 }
 
 .btn {
@@ -569,4 +586,58 @@ body {
 .button-effect-12:hover {
 	color: #262626;
 	transition-delay: .4s;
+}
+/* №13------------------------------------------------------------------------------------------ */
+.button-effect-13 {
+	width: 320px;
+	height: 40px;
+	background-color: transparent;
+	text-align: center;
+	line-height: 40px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	transition: all .2s;
+	border: none;
+	border-radius: 0;
+	color: white;
+	
+}
+.button-effect-13::before{
+	content: '';
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	width: 100%;
+	height: 100%;
+	background-color: #20caff;
+	z-index: -1;
+	mix-blend-mode: multiply;
+	transition: all .2s;
+	transform-origin: top;
+}
+.button-effect-13::after{
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 100%;
+	height: 100%;
+	background-color: #ff7675;
+	z-index: -1;
+	mix-blend-mode: multiply;
+	transition: all .2s;
+	transform-origin: bottom;
+
+
+
+}
+.button-effect-13:hover::before{
+	top: -6px;
+	left: 0;
+	transform: perspective(400px) rotateX(75deg);
+}
+.button-effect-13:hover::after{
+	top: 6px;
+	left: 0;
+	transform: perspective(400px) rotateX(-75deg);
 }
