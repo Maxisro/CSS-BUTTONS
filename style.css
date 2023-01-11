@@ -104,7 +104,7 @@ body {
 	}
 
 	.btn {
-		font-size: 20px;
+		font-size: 18px;
 		padding: 10px 20px;
 		text-align: center;
 
@@ -113,11 +113,14 @@ body {
 
 @media screen and (max-width: 425px) {
 	.buttons-container {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 	}
 
 	.title {
-		font-size: 1.2em;
+		font-size: 1.4em;
+	}
+	.btn {
+		/* font-size: 1px; */
 	}
 }
 
@@ -516,9 +519,9 @@ body {
 	display: block;
 	overflow: visible;
 	text-align: center;
-	line-height: 40px;
+	/* line-height: 40px;
 	width: 320px;
-	height: 40px;
+	height: 40px; */
 	color: #ff0;
 	background-color: transparent;
 	border-color: transparent;
@@ -589,11 +592,11 @@ body {
 }
 /* №13------------------------------------------------------------------------------------------ */
 .button-effect-13 {
-	width: 320px;
-	height: 40px;
+	/* width: 320px;
+	height: 40px; */
 	background-color: transparent;
 	text-align: center;
-	line-height: 40px;
+	/* line-height: 40px; */
 	font-weight: bold;
 	letter-spacing: 2px;
 	transition: all .2s;
@@ -605,8 +608,8 @@ body {
 .button-effect-13::before{
 	content: '';
 	position: absolute;
-	top: -6px;
-	left: -6px;
+	top: -3px;
+	left: -3px;
 	width: 100%;
 	height: 100%;
 	background-color: #20caff;
@@ -614,12 +617,16 @@ body {
 	mix-blend-mode: multiply;
 	transition: all .2s;
 	transform-origin: top;
+	-webkit-perspective: 1000px;
+	-webkit-perspective-origin: top;
+	/* perspective: 1000px;
+	-moz-perspective: 1000px; */
 }
 .button-effect-13::after{
 	content: '';
 	position: absolute;
-	top: 6px;
-	left: 6px;
+	top: 3px;
+	left: 3px;
 	width: 100%;
 	height: 100%;
 	background-color: #ff7675;
@@ -634,10 +641,14 @@ body {
 .button-effect-13:hover::before{
 	top: -6px;
 	left: 0;
-	transform: perspective(400px) rotateX(75deg);
+	-webkit-transform: rotateX(75deg);
+	-moz-transform: rotateX(75deg);
+	
+	transform: rotateX(75deg);
+
 }
 .button-effect-13:hover::after{
 	top: 6px;
 	left: 0;
-	transform: perspective(400px) rotateX(-75deg);
+	transform: rotateX(-75deg);
 }
