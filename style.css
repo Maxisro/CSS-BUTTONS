@@ -616,7 +616,72 @@ body {
 	transform: rotateX(-75deg);
 }
 
+/* №14------------------------------------------------------------------------------------------ */
+.button-effect-14{
+	color: #f6b93b;
+	border-color:#f6b93b;
+	transition: all .5s;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.s14{
+	padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px;
+}
+.button-effect-14::before,
+.button-effect-14::after,
+.s14::before,
+.s14::after{
+	content: '';
+	position: absolute;
+	width: 25%;
+	height: 100%;
+	background-color: #f6b93b;
+	z-index: -1;
+	transition: all .2s;
+}
+.button-effect-14::before{
+	top: 0;
+	left: -25%;
+}
+.button-effect-14:hover::before{
+	top: 0;
+	left: 0;
+}
+.button-effect-14::after{
+	top: -100%;
+	left: 25%;
+	transition-delay: .1s;
+}
+.button-effect-14:hover::after{
+	top: 0;
+	left: 25%;
+}
 
+.s14::before{
+	top: 100%;
+	right: 25%;
+	transition-delay: .2s;
+}
+.s14:hover:before{
+	top: 0;
+	right: 25%;
+}
+
+.s14::after{
+	top: 0;
+	right: -25%;
+	transition-delay: .3s;
+}
+.s14:hover::after{
+	top: 0;
+	right: 0;
+}
+
+.button-effect-14:hover{
+	color: #222;
+}
 
 /* FOOTER--------------------------------------------------------------------------------------------------------- */
 .footer{
