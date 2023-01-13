@@ -682,6 +682,23 @@ body {
 .button-effect-14:hover{
 	color: #222;
 }
+/* №15------------------------------------------------------------------------------------------ */
+.button-effect-15{
+	color: #fdc518;
+	border: 2px solid blue;
+	border-radius: 0%;
+	overflow: visible;
+}
+.button-effect-15::before{
+	content: '';
+	position: absolute;
+	height: 150%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-left: 2px solid red;
+	border-right: 2px solid #fdc518;
+}
 
 /* FOOTER--------------------------------------------------------------------------------------------------------- */
 .footer{
