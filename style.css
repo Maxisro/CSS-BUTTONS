@@ -762,6 +762,46 @@ body {
 }
 
 
+/* №16------------------------------------------------------------------------------------------ */
+
+.button-effect-16 {
+    border: none;
+    border-radius: 0;
+    background-color: #c47135;
+    overflow: visible;
+}
+
+.button-effect-16::before {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    top: -5px;
+    left: -5px;
+    border-top: 2px solid #c47135;
+    border-left: 2px solid #c47135;
+    transition: all 1s;
+}
+
+.button-effect-16::after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 2px solid #c47135;
+    border-right: 2px solid #c47135;
+    transition: all .7s;
+}
+
+.button-effect-16:hover::before,
+.button-effect-16:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+
 /* FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
