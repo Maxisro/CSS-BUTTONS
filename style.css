@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
 
 /* Обнуление */
+
 *,
 *::before,
 *::after {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 ul,
 ol,
 li {
-	list-style: none;
+    list-style: none;
 }
 
 img {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 h1,
@@ -30,679 +31,741 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: inherit;
-	font-size: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 html,
 body {
-	height: 100%;
-	line-height: 1;
-	font-size: 16px;
-	background-color: #0d0129;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background-color: #0d0129;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+
 /* HEADER--------------------------------------------------------------------------------------------------------- */
-.header{
-	background-color: #011929;
-	padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
-	text-align: center;
+
+.header {
+    background-color: #011929;
+    padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
 }
+
 
 /* MAIN--------------------------------------------------------------------------------------------------------- */
 
-.main{
-	padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
-	flex: 1 1 auto;
+.main {
+    padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+    flex: 1 1 auto;
 }
 
 .container {
-	margin: 0 auto;
-	border-radius: 4px;
-	max-width: 1440px;
-
+    margin: 0 auto;
+    border-radius: 4px;
+    max-width: 1440px;
 }
 
 .title {
-	font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-	font-weight: 900;
-	letter-spacing: 0.3125rem;
-	text-align: center;
-	margin-bottom: calc(15px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-	color: #fff;
-	text-transform: uppercase;
-
+    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 900;
+    letter-spacing: 0.3125rem;
+    text-align: center;
+    margin-bottom: calc(15px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+    color: #fff;
+    text-transform: uppercase;
 }
+
+
 /* MAIN - BUTTONS--------------------------------------------------------------------------------------------------------- */
 
-
 .buttons-container {
-	display: grid;
-	gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-	grid-template-columns: repeat(auto-fit, minmax(17rem , 1fr));
-	margin-bottom:calc(30px + (60 - 20) * ((100vw - 320px) / (1440 - 320)));; ;
+    display: grid;
+    gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    margin-bottom: calc(40px + (70 - 20) * ((100vw - 320px) / (1440 - 320)));
+    ;
+    ;
 }
 
 .btn {
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
-	color: rgb(234, 231, 239);
-	font-family: 'Roboto', sans-serif;
-	font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (1440 - 320)));
-	font-weight: 700;
-	letter-spacing: 0.3125rem;
-	border: 3px solid #9899b3;
-	padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
-	position: relative;
-	overflow: hidden;
-	z-index: 2;
-	border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(234, 231, 239);
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    letter-spacing: 0.3125rem;
+    border: 3px solid #9899b3;
+    padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 10px;
 }
+
 
 /* №1------------------------------------------------------------------------------------------ */
 
 .button-effect-1:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	background-color: rgb(255, 255, 0);
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-	transform-origin: bottom left;
-	transform: rotate(-90deg);
-	transition: transform 1s;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 255, 0);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: transform 1s;
 }
 
 .button-effect-1:hover:before {
-	transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
+
 /* №2------------------------------------------------------------------------------------------ */
+
 .button-effect-2 {
-	transition: all 1s;
+    transition: all 1s;
 }
 
 .button-effect-2:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #351435;
-	z-index: -1;
-	transform: translateX(-100%);
-	transition: all 1s;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #351435;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 1s;
 }
 
 .button-effect-2::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #35014b;
-	z-index: -1;
-	transform: translateX(100%);
-	transition: all 1s;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #35014b;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
 }
 
 .button-effect-2:hover:before {
-	transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .button-effect-2:hover::after {
-	transform: translateX(49%);
+    transform: translateX(49%);
 }
 
 .button-effect-2:hover {
-	color: white;
+    color: white;
 }
 
+
 /* №3------------------------------------------------------------------------------------------ */
+
 .button-effect-3 {
-	color: #767575;
-	transition: all 1s;
+    color: #767575;
+    transition: all 1s;
 }
 
 .button-effect-3::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background-color: #262626;
-	transition: 1s;
-	transform: rotateX(90deg);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #262626;
+    transition: 1s;
+    transform: rotateX(90deg);
 }
 
 .button-effect-3::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background-color: #262626;
-	transition: 1s;
-	transform: rotateY(90deg);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #262626;
+    transition: 1s;
+    transform: rotateY(90deg);
 }
 
 .button-effect-3:hover::before {
-	transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
 
 .button-effect-3:hover::after {
-	transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
 .button-effect-3:hover {
-	color: white;
+    color: white;
 }
 
+
 /* №4------------------------------------------------------------------------------------------ */
+
 .button-effect-4 {
-	color: #e1332d;
-	transition: all 1s;
-	border-color: #e1332d;
-	font-weight: 300;
-	letter-spacing: -0.2rem;
-	transition: all .5s;
+    color: #e1332d;
+    transition: all 1s;
+    border-color: #e1332d;
+    font-weight: 300;
+    letter-spacing: -0.2rem;
+    transition: all .5s;
 }
 
 .button-effect-4:hover {
-	font-weight: 900;
-	letter-spacing: 0.4375rem;
-	border: 3px solid #ddff00;
+    font-weight: 900;
+    letter-spacing: 0.4375rem;
+    border: 3px solid #ddff00;
 }
 
+
 /* №5------------------------------------------------------------------------------------------ */
+
 .button-effect-5 {
-	color: white;
-	border: 3px solid #fff;
-	transition: all 1s;
+    color: white;
+    border: 3px solid #fff;
+    transition: all 1s;
 }
 
 .button-effect-5::before {
-	content: 'YEAH!';
-	color: white;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #f44336;
-	transition: 1s;
-	transform: translateY(-100%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    content: 'YEAH!';
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f44336;
+    transition: 1s;
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-effect-5:hover:before {
-	transform: translateY(0)
+    transform: translateY(0)
 }
 
+
 /* №6------------------------------------------------------------------------------------------ */
+
 .button-effect-6 {
-	color: white;
-	border: 3px solid white;
-	transition: all 1s;
+    color: white;
+    border: 3px solid white;
+    transition: all 1s;
 }
 
 .button-effect-6:hover {
-	background-color: #f44336;
+    background-color: #f44336;
 }
 
 .button-effect-6::before {
-	content: '';
-	background-color: white;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 30px;
-	position: absolute;
-	transform: translateX(-100%) rotate(45deg);
-	transition: all .6s;
-
+    content: '';
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all .6s;
 }
 
 .button-effect-6:hover::before {
-	transform: translateX(100%) rotate(45deg);
-
+    transform: translateX(100%) rotate(45deg);
 }
 
+
 /* №7------------------------------------------------------------------------------------------ */
+
 .button-effect-7 {
-	background-color: #262626;
-	color: transparent;
+    background-color: #262626;
+    color: transparent;
 }
 
 .button-effect-7::before {
-	content: 'button-7';
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #fffa65;
-	color: #262626;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all .5s;
+    content: 'button-7';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fffa65;
+    color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
 }
 
 .button-effect-7::after {
-	content: 'button-7';
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #fffa65;
-	color: #262626;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all .5s;
-	transform: translate(-100%, 100%);
+    content: 'button-7';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fffa65;
+    color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    transform: translate(-100%, 100%);
 }
 
 .button-effect-7:hover::before {
-	transform: translate(100%, -100%);
-
+    transform: translate(100%, -100%);
 }
 
 .button-effect-7:hover::after {
-	transform: translate(0%, 0%);
-
+    transform: translate(0%, 0%);
 }
 
+
 /* №8------------------------------------------------------------------------------------------ */
+
 .button-effect-8 {
-	transition: all .5s;
+    transition: all .5s;
 }
 
 .button-effect-8::before {
-	content: 'button-8';
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #262626;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transform: scale(5);
-	opacity: 0;
-	transition: all 0.5s;
+    content: 'button-8';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #262626;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(5);
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .button-effect-8:hover::before {
-	transform: scale(1);
-	opacity: 1;
+    transform: scale(1);
+    opacity: 1;
 }
 
+
 /* №9------------------------------------------------------------------------------------------ */
+
 .button-effect-9 {
-	border: 3px solid tomato;
-	background: none;
-	color: tomato;
-	transition: all .5s;
+    border: 3px solid tomato;
+    background: none;
+    color: tomato;
+    transition: all .5s;
 }
 
 .button-effect-9::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: tomato;
-	z-index: -1;
-	border-radius: 0 0 50% 50%;
-	height: 0;
-	transition: all .5s;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    height: 0;
+    transition: all .5s;
 }
 
 .button-effect-9:hover::before {
-	height: 190%;
+    height: 190%;
 }
 
 .button-effect-9:hover {
-	color: white;
+    color: white;
 }
 
+
 /* №10------------------------------------------------------------------------------------------ */
+
 .button-effect-10 {
-	background-color: #f1c40f;
-	color: white;
-	overflow: visible;
-	border-radius: 0%;
+    background-color: #f1c40f;
+    color: white;
+    overflow: visible;
+    border-radius: 0%;
 }
 
 .button-effect-10::before {
-	content: 'button-10';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #2ce771;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transform: rotateX(270deg);
-	transform-origin: top;
-	transition: all .5s;
-	border-bottom: 1px solid #262626;
-	border-right: 1px solid #262626;
+    content: "Let's";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2ce771;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all .5s;
+    border-bottom: 1px solid #262626;
+    border-right: 1px solid #262626;
 }
 
 .button-effect-10::after {
-	content: 'button-10';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: red;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transform: rotateX(270deg);
-	transform-origin: top;
-	transition: all .5s;
-	border-bottom: 1px solid #262626;
-	border-right: 1px solid #262626;
-	transition-delay: .25s;
+    content: 'go!';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all .5s;
+    border-bottom: 1px solid #262626;
+    border-right: 1px solid #262626;
+    transition-delay: .25s;
 }
 
 .button-effect-10:hover::before,
 .button-effect-10:hover::after {
-	transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
 
+
 /* №11------------------------------------------------------------------------------------------ */
+
 .button-effect-11 {
-	color: transparent;
-	border-color: #ff0;
+    color: transparent;
+    border-color: #ff0;
 }
 
 .button-effect-11::before {
-	content: 'button-11';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #363636;
-	color: #ff0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: all 1s;
+    content: 'button-11';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+    color: #ff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
 }
 
 .button-effect-11:hover::before {
-	left: 100%;
-	opacity: 0;
-	transform: scale(0) rotateY(360deg);
+    left: 100%;
+    opacity: 0;
+    transform: scale(0) rotateY(360deg);
 }
 
 .button-effect-11::after {
-	content: 'button-11';
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background-color: #363636;
-	color: #ff0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transform: scale(0) rotateY(0);
-	opacity: 0;
-	transition: all 1s;
+    content: 'button-11';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+    color: #ff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotateY(0);
+    opacity: 0;
+    transition: all 1s;
 }
 
 .button-effect-11:hover::after {
-	left: 0;
-	opacity: 1;
-	transform: scale(1) rotateY(360deg);
+    left: 0;
+    opacity: 1;
+    transform: scale(1) rotateY(360deg);
 }
 
+
 /* №12------------------------------------------------------------------------------------------ */
+
 .button-effect-12 {
-	overflow: visible;
-	color: #ff0;
-	background-color: transparent;
-	border-color: transparent;
-	transition: all .5s;
+    overflow: visible;
+    color: #ff0;
+    background-color: transparent;
+    border-color: transparent;
+    transition: all .5s;
 }
 
 .button-effect-12::before,
 .button-effect-12::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	width: 20px;
-	height: 20px;
-	background-color: #ff0;
-	border-radius: 50%;
-	transform: translateY(-50%);
-	transition: all .3s;
-	z-index: -1;
-	opacity: 0;
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all .3s;
+    z-index: -1;
+    opacity: 0;
 }
 
 .button-effect-12::before {
-	left: 0;
-	box-shadow: -100px 0 0 #ff0;
+    left: 0;
+    box-shadow: -100px 0 0 #ff0;
 }
 
 .button-effect-12::after {
-	right: 0;
-	box-shadow: 100px 0 0 #ff0;
-
+    right: 0;
+    box-shadow: 100px 0 0 #ff0;
 }
 
 .button-effect-12:hover::before {
-	left: 50%;
-	box-shadow: 30px 0 0 #ff0;
-	transform: translateX(-50%) translateY(-50%);
-	opacity: 1;
+    left: 50%;
+    box-shadow: 30px 0 0 #ff0;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
 }
 
 .button-effect-12:hover::after {
-	right: 50%;
-	box-shadow: -30px 0 0 #ff0;
-	transform: translateX(50%) translateY(-50%);
-	opacity: 1;
+    right: 50%;
+    box-shadow: -30px 0 0 #ff0;
+    transform: translateX(50%) translateY(-50%);
+    opacity: 1;
 }
 
 .button-effect-12 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #ff0;
-	border-radius: 10px;
-	transform: scale(0);
-	transition: all 0.3s;
-	z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: all 0.3s;
+    z-index: -1;
 }
 
 .button-effect-12:hover span {
-	transform: scale(1);
-	transition-delay: 0.4s;
+    transform: scale(1);
+    transition-delay: 0.4s;
 }
 
 .button-effect-12:hover {
-	color: #262626;
-	transition-delay: .4s;
+    color: #262626;
+    transition-delay: .4s;
 }
 
+
 /* №13------------------------------------------------------------------------------------------ */
+
 .button-effect-13 {
-	background-color: transparent;
-	text-align: center;
-	font-weight: bold;
-	transition: all .2s;
-	border: none;
-	border-radius: 0;
-	color: white;
-	overflow: visible;
-	perspective: 1000px;
+    background-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    transition: all .2s;
+    border: none;
+    border-radius: 0;
+    color: white;
+    overflow: visible;
+    perspective: 1000px;
 }
 
 .button-effect-13::before {
-	content: '';
-	position: absolute;
-	top: -3px;
-	left: -3px;
-	width: 100%;
-	height: 100%;
-	background-color: #20caff;
-	z-index: -1;
-	mix-blend-mode: multiply;
-	transition: all .2s;
-	transform-origin: top;
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    background-color: #20caff;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all .2s;
+    transform-origin: top;
 }
 
 .button-effect-13::after {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 100%;
-	height: 100%;
-	background-color: #ff7675;
-	z-index: -1;
-	mix-blend-mode: multiply;
-	transition: all .2s;
-	transform-origin: bottom;
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: #ff7675;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all .2s;
+    transform-origin: bottom;
 }
 
 .button-effect-13:hover::before {
-	top: -6px;
-	left: 0;
-	transform: rotateX(75deg);
+    top: -6px;
+    left: 0;
+    transform: rotateX(75deg);
 }
 
 .button-effect-13:hover::after {
-	top: 6px;
-	left: 0;
-	transform: rotateX(-75deg);
+    top: 6px;
+    left: 0;
+    transform: rotateX(-75deg);
 }
 
+
 /* №14------------------------------------------------------------------------------------------ */
-.button-effect-14{
-	color: #f6b93b;
-	border-color:#f6b93b;
-	transition: all .5s;
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+.button-effect-14 {
+    color: #f6b93b;
+    border-color: #f6b93b;
+    transition: all .5s;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.s14{
-	padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px;
+
+.s14 {
+    padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px;
 }
+
 .button-effect-14::before,
 .button-effect-14::after,
 .s14::before,
-.s14::after{
-	content: '';
-	position: absolute;
-	width: 25%;
-	height: 100%;
-	background-color: #f6b93b;
-	z-index: -1;
-	transition: all .2s;
-}
-.button-effect-14::before{
-	top: 0;
-	left: -25%;
-}
-.button-effect-14:hover::before{
-	top: 0;
-	left: 0;
-}
-.button-effect-14::after{
-	top: -100%;
-	left: 25%;
-	transition-delay: .1s;
-}
-.button-effect-14:hover::after{
-	top: 0;
-	left: 25%;
+.s14::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #f6b93b;
+    z-index: -1;
+    transition: all .2s;
 }
 
-.s14::before{
-	top: 100%;
-	right: 25%;
-	transition-delay: .2s;
-}
-.s14:hover:before{
-	top: 0;
-	right: 25%;
+.button-effect-14::before {
+    top: 0;
+    left: -25%;
 }
 
-.s14::after{
-	top: 0;
-	right: -25%;
-	transition-delay: .3s;
-}
-.s14:hover::after{
-	top: 0;
-	right: 0;
+.button-effect-14:hover::before {
+    top: 0;
+    left: 0;
 }
 
-.button-effect-14:hover{
-	color: #222;
+.button-effect-14::after {
+    top: -100%;
+    left: 25%;
+    transition-delay: .1s;
 }
+
+.button-effect-14:hover::after {
+    top: 0;
+    left: 25%;
+}
+
+.s14::before {
+    top: 100%;
+    right: 25%;
+    transition-delay: .2s;
+}
+
+.s14:hover:before {
+    top: 0;
+    right: 25%;
+}
+
+.s14::after {
+    top: 0;
+    right: -25%;
+    transition-delay: .3s;
+}
+
+.s14:hover::after {
+    top: 0;
+    right: 0;
+}
+
+.button-effect-14:hover {
+    color: #222;
+}
+
+
 /* №15------------------------------------------------------------------------------------------ */
-.button-effect-15{
-	color: #fdc518;
-	border: 2px solid blue;
-	border-radius: 0%;
-	overflow: visible;
+
+.button-effect-15 {
+    color: #fdc518;
+    border: none;
+    border-radius: 0%;
+    overflow: visible;
 }
-.button-effect-15::before{
-	content: '';
-	position: absolute;
-	height: 150%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	border-left: 2px solid red;
-	border-right: 2px solid #fdc518;
+
+.button-effect-15::before {
+    content: '';
+    position: absolute;
+    height: 130%;
+    width: 100%;
+    top: -15%;
+    left: 0;
+    border-left: 2px solid red;
+    border-right: 2px solid #fdc518;
+    transition: all .4s;
 }
+
+.button-effect-15::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 110%;
+    top: 0;
+    left: -5%;
+    border-top: 2px solid red;
+    border-bottom: 2px solid #fdc518;
+    transition: all .4s;
+    transition-delay: .4s;
+}
+
+.button-effect-15:hover::before {
+    transform: rotateY(180deg);
+}
+
+.button-effect-15:hover::after {
+    transform: rotateX(180deg);
+}
+
 
 /* FOOTER--------------------------------------------------------------------------------------------------------- */
-.footer{
-	background-color: #011929;
-	padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
-	text-align: center;
+
+.footer {
+    background-color: #011929;
+    padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
 }
