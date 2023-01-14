@@ -102,11 +102,15 @@ body {
     text-align: center;
     color: rgb(234, 231, 239);
     font-family: 'Roboto', sans-serif;
-    font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1440 - 320)));
     font-weight: 700;
     letter-spacing: 0.3125rem;
     border: 3px solid #9899b3;
-    padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+    /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))); */
+    padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding-left: calc(20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding-right: calc(20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)));
     position: relative;
     overflow: hidden;
     z-index: 2;
@@ -652,10 +656,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1440 - 320)));
 }
 
 .s14 {
-    padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px;
+    /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px; */
+    padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding-left: calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
+    padding-right: calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
 }
 
 .button-effect-14::before,
@@ -802,15 +811,6 @@ body {
 }
 
 
-/* FOOTER--------------------------------------------------------------------------------------------------------- */
-
-.footer {
-    background-color: #011929;
-    padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
-    text-align: center;
-}
-
-
 /* №17------------------------------------------------------------------------------------------ */
 
 .button-effect-17 {
@@ -861,4 +861,85 @@ body {
     color: white;
     font-size: calc(56px + (80 - 56) * ((100vw - 320px) / (1440 - 320)));
     transform: translate(-65%, -50%) rotate(360deg);
+}
+
+
+/* №18------------------------------------------------------------------------------------------ */
+
+.button-effect-18 {
+    border-radius: 0;
+    transition: all .2s;
+    border: none;
+}
+
+.button-effect-18::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all .5s;
+}
+
+.button-effect-18:hover:before {
+    left: 0;
+}
+
+.button-effect-18::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all .5s;
+}
+
+.button-effect-18:hover:after {
+    right: 0;
+    /* transition-delay: .8s; */
+}
+
+.s18::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    transition: all .5s;
+}
+
+.button-effect-18:hover .s18:after {
+    top: 0;
+    /* transition-delay: .4s; */
+}
+
+.s18::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    transition: all .5s;
+}
+
+.button-effect-18:hover .s18:before {
+    bottom: 0;
+    /* transition-delay: 1.2s; */
+}
+
+
+/* FOOTER--------------------------------------------------------------------------------------------------------- */
+
+.footer {
+    background-color: #011929;
+    padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
 }
