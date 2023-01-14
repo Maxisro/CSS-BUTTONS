@@ -753,9 +753,9 @@ body {
     content: '';
     position: absolute;
     height: 100%;
-    width: 110%;
+    width: 105%;
     top: 0;
-    left: -5%;
+    left: -2.5%;
     border-top: 2px solid red;
     border-bottom: 2px solid #fdc518;
     transition: all .4s;
@@ -933,6 +933,55 @@ body {
 .button-effect-18:hover .s18:before {
     bottom: 0;
     /* transition-delay: 1.2s; */
+}
+
+
+/* №19------------------------------------------------------------------------------------------ */
+
+.button-effect-19 {
+    border-radius: 0;
+    border-color: #00aeff;
+    color: #00aeff;
+    transition: all .5s;
+}
+
+.button-effect-19:hover .wave {
+    top: 0;
+}
+
+.button-effect-19:hover {
+    color: white
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: calc(100% + 22px);
+    background-color: #00aeff;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.wave::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(./img/buttons/btn18/wave.png);
+    animation: wavy .5s linear infinite;
+}
+
+@keyframes wavy {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 70%;
+    }
 }
 
 
