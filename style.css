@@ -99,7 +99,9 @@ body {
 .btn {
     text-decoration: none;
     text-transform: uppercase;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(234, 231, 239);
     font-family: 'Roboto', sans-serif;
     font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1440 - 320)));
@@ -107,10 +109,10 @@ body {
     letter-spacing: 0.3125rem;
     border: 3px solid #9899b3;
     /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))); */
-    padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
-    padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
-    padding-left: calc(20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)));
-    padding-right: calc(20px + (60 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+    padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+    padding-left: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding-right: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
     position: relative;
     overflow: hidden;
     z-index: 2;
@@ -661,10 +663,10 @@ body {
 
 .s14 {
     /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px; */
-    padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
-    padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
-    padding-left: calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
-    padding-right: calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
+    padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+    padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+    padding-left: calc(40px + (50 - 40) * ((100vw - 320px) / (1440 - 320)));
+    padding-right: calc(40px + (50 - 40) * ((100vw - 320px) / (1440 - 320)));
 }
 
 .button-effect-14::before,
@@ -1021,7 +1023,7 @@ body {
 
 .button-effect-20:hover .s20::before {
     width: 100%;
-    background-color: black;
+    background-color: rgb(64, 1, 73);
     transform: translate(-50%, -50%) rotate(60deg);
 }
 
@@ -1046,8 +1048,8 @@ body {
     content: '';
     position: absolute;
     height: 100%;
-    width: 50%;
-    left: -1%;
+    width: 40%;
+    left: 10%;
     top: -5px;
     background-color: yellow;
     opacity: .7;
@@ -1059,6 +1061,7 @@ body {
 .button-effect-21:hover:before {
     left: 50%;
     top: 0;
+    width: 50%;
     transform: skewX(0);
 }
 
@@ -1066,8 +1069,8 @@ body {
     content: '';
     position: absolute;
     height: 100%;
-    width: 50%;
-    left: 51%;
+    width: 40%;
+    left: 52%;
     top: 5px;
     background-color: blue;
     transform: skewX(30deg);
@@ -1078,7 +1081,49 @@ body {
 .button-effect-21:hover::after {
     left: 0%;
     top: 0;
+    width: 50%;
     transform: skewX(0);
+}
+
+
+/* №22------------------------------------------------------------------------------------------ */
+
+.button-effect-22 {
+    border-radius: 100px;
+    border: none;
+    background-color: white;
+    color: #777;
+    text-transform: uppercase;
+    transition: all .2s;
+    overflow: visible;
+}
+
+.button-effect-22::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all .7s;
+}
+
+.button-effect-22:hover::before {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.button-effect-22:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(227, 233, 247, 0.5)
+}
+
+.button-effect-22:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(227, 233, 247, 0.5)
 }
 
 
