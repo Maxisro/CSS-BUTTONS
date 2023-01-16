@@ -1247,6 +1247,48 @@
     .image-item-2:hover .img2 {
         transform: scale(1.3) rotate(-15deg);
     }
+    /* IMG-3--------------------------------------------------------------------------------------------------------- */
+    
+    .img3 {
+        transition: all 0.5s;
+    }
+    
+    .img3-caption {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0);
+        transform: translateX(-100%);
+        transition: all .5s;
+    }
+    
+    .img3-caption-title {
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: .7em;
+        letter-spacing: 2px;
+    }
+    
+    .img3-caption-text {
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+    
+    .image-item-3:hover .img3-caption {
+        background-color: rgba(0, 0, 0, 1);
+        transform: translateX(0);
+    }
+    
+    .image-item-3:hover .img3 {
+        transform: translateX(100%);
+    }
     /* FOOTER--------------------------------------------------------------------------------------------------------- */
     
     .footer {
