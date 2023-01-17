@@ -1,1340 +1,1421 @@
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
-    /* Обнуление */
-    
-    *,
-    *::before,
-    *::after {
-        padding: 0;
-        margin: 0;
-        border: 0;
-        box-sizing: border-box;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    ul,
-    ol,
-    li {
-        list-style: none;
-    }
-    
-    img {
-        vertical-align: top;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: inherit;
-        font-size: inherit;
-    }
-    
-    html,
-    body {
-        height: 100%;
-        line-height: 1;
-        font-size: 16px;
-        /* background-color: #0d0129; */
-        background: #0f0c29;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        color: #fff;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    .wrapper {
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    /* HEADER--------------------------------------------------------------------------------------------------------- */
-    
-    .header {
-        background-color: #011929;
-        padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
-        text-align: center;
-    }
-    /* MAIN--------------------------------------------------------------------------------------------------------- */
-    
-    .main {
-        padding: 0 15px 0 15px;
-        flex: 1 1 auto;
-    }
-    
-    .container {
-        margin: 0 auto;
-        max-width: 1440px;
-        margin-bottom: calc(40px + (70 - 20) * ((100vw - 320px) / (1440 - 320)));
-    }
-    
-    .title {
-        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-        font-weight: 900;
-        letter-spacing: 0.3125rem;
-        text-align: center;
-        padding-top: 30px;
-        margin-bottom: calc(15px + (50 - 20) * ((100vw - 320px) / (1440 - 320)));
-        color: #fff;
-        text-transform: uppercase;
-    }
-    /* MAIN - BUTTONS--------------------------------------------------------------------------------------------------------- */
-    
-    .buttons-container {
-        display: grid;
-        gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    
-    .btn {
-        text-decoration: none;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(234, 231, 239);
-        font-family: 'Roboto', sans-serif;
-        font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1440 - 320)));
-        font-weight: 700;
-        letter-spacing: 0.3125rem;
-        border: 3px solid #9899b3;
-        /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))); */
-        padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
-        padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
-        padding-left: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
-        padding-right: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
-        position: relative;
-        overflow: hidden;
-        z-index: 2;
-        border-radius: 10px;
-    }
-    /* №1------------------------------------------------------------------------------------------ */
-    
-    .button-effect-1:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: rgb(255, 255, 0);
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        transform-origin: bottom left;
-        transform: rotate(-90deg);
-        transition: transform 1s;
-    }
-    
-    .button-effect-1:hover:before {
-        transform: rotate(0deg);
-    }
-    /* №2------------------------------------------------------------------------------------------ */
-    
-    .button-effect-2 {
-        transition: all 1s;
-    }
-    
-    .button-effect-2:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #351435;
-        z-index: -1;
-        transform: translateX(-100%);
-        transition: all 1s;
-    }
-    
-    .button-effect-2::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #35014b;
-        z-index: -1;
-        transform: translateX(100%);
-        transition: all 1s;
-    }
-    
-    .button-effect-2:hover:before {
-        transform: translateX(-50%);
-    }
-    
-    .button-effect-2:hover::after {
-        transform: translateX(49%);
-    }
-    
-    .button-effect-2:hover {
-        color: white;
-    }
-    /* №3------------------------------------------------------------------------------------------ */
-    
-    .button-effect-3 {
-        color: #767575;
-        transition: all 1s;
-    }
-    
-    .button-effect-3::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background-color: #262626;
-        transition: 1s;
-        transform: rotateX(90deg);
-    }
-    
-    .button-effect-3::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background-color: #262626;
-        transition: 1s;
-        transform: rotateY(90deg);
-    }
-    
-    .button-effect-3:hover::before {
-        transform: rotateX(0deg);
-    }
-    
-    .button-effect-3:hover::after {
-        transform: rotateY(0deg);
-    }
-    
-    .button-effect-3:hover {
-        color: white;
-    }
-    /* №4------------------------------------------------------------------------------------------ */
-    
-    .button-effect-4 {
-        color: #e1332d;
-        transition: all 1s;
-        border-color: #e1332d;
-        font-weight: 300;
-        letter-spacing: -0.2rem;
-        transition: all .5s;
-    }
-    
-    .button-effect-4:hover {
-        font-weight: 900;
-        letter-spacing: 0.4375rem;
-        border: 3px solid #ddff00;
-    }
-    /* №5------------------------------------------------------------------------------------------ */
-    
-    .button-effect-5 {
-        color: white;
-        border: 3px solid #fff;
-        transition: all 1s;
-    }
-    
-    .button-effect-5::before {
-        content: 'YEAH!';
-        color: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #f44336;
-        transition: 1s;
-        transform: translateY(-100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .button-effect-5:hover:before {
-        transform: translateY(0)
-    }
-    /* №6------------------------------------------------------------------------------------------ */
-    
-    .button-effect-6 {
-        color: white;
-        border: 3px solid white;
-        transition: all 1s;
-    }
-    
-    .button-effect-6:hover {
-        background-color: #f44336;
-    }
-    
-    .button-effect-6::before {
-        content: '';
-        background-color: white;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        position: absolute;
-        transform: translateX(-100%) rotate(45deg);
-        transition: all .6s;
-    }
-    
-    .button-effect-6:hover::before {
-        transform: translateX(100%) rotate(45deg);
-    }
-    /* №7------------------------------------------------------------------------------------------ */
-    
-    .button-effect-7 {
-        background-color: #262626;
-        color: transparent;
-    }
-    
-    .button-effect-7::before {
-        content: 'button-7';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #fffa65;
-        color: #262626;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all .5s;
-    }
-    
-    .button-effect-7::after {
-        content: 'button-7';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #fffa65;
-        color: #262626;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all .5s;
-        transform: translate(-100%, 100%);
-    }
-    
-    .button-effect-7:hover::before {
-        transform: translate(100%, -100%);
-    }
-    
-    .button-effect-7:hover::after {
-        transform: translate(0%, 0%);
-    }
-    /* №8------------------------------------------------------------------------------------------ */
-    
-    .button-effect-8 {
-        transition: all .5s;
-    }
-    
-    .button-effect-8::before {
-        content: 'button-8';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #262626;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: scale(5);
-        opacity: 0;
-        transition: all 0.5s;
-    }
-    
-    .button-effect-8:hover::before {
-        transform: scale(1);
-        opacity: 1;
-    }
-    /* №9------------------------------------------------------------------------------------------ */
-    
-    .button-effect-9 {
-        border: 3px solid tomato;
-        background: none;
-        color: tomato;
-        transition: all .5s;
-    }
-    
-    .button-effect-9::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: tomato;
-        z-index: -1;
-        border-radius: 0 0 50% 50%;
-        height: 0;
-        transition: all .5s;
-    }
-    
-    .button-effect-9:hover::before {
-        height: 190%;
-    }
-    
-    .button-effect-9:hover {
-        color: white;
-    }
-    /* №10------------------------------------------------------------------------------------------ */
-    
-    .button-effect-10 {
-        background-color: #f1c40f;
-        color: white;
-        overflow: visible;
-        border-radius: 0%;
-    }
-    
-    .button-effect-10::before {
-        content: "Let's";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #2ce771;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: rotateX(270deg);
-        transform-origin: top;
-        transition: all .5s;
-        border-bottom: 1px solid #262626;
-        border-right: 1px solid #262626;
-    }
-    
-    .button-effect-10::after {
-        content: 'go!';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: red;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: rotateX(270deg);
-        transform-origin: top;
-        transition: all .5s;
-        border-bottom: 1px solid #262626;
-        border-right: 1px solid #262626;
-        transition-delay: .25s;
-    }
-    
-    .button-effect-10:hover::before,
-    .button-effect-10:hover::after {
-        transform: rotateX(0deg);
-    }
-    /* №11------------------------------------------------------------------------------------------ */
-    
-    .button-effect-11 {
-        color: transparent;
-        border-color: #ff0;
-    }
-    
-    .button-effect-11::before {
-        content: 'button-11';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #363636;
-        color: #ff0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 1s;
-    }
-    
-    .button-effect-11:hover::before {
-        left: 100%;
-        opacity: 0;
-        transform: scale(0) rotateY(360deg);
-    }
-    
-    .button-effect-11::after {
-        content: 'button-11';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background-color: #363636;
-        color: #ff0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: scale(0) rotateY(0);
-        opacity: 0;
-        transition: all 1s;
-    }
-    
-    .button-effect-11:hover::after {
-        left: 0;
-        opacity: 1;
-        transform: scale(1) rotateY(360deg);
-    }
-    /* №12------------------------------------------------------------------------------------------ */
-    
-    .button-effect-12 {
-        overflow: visible;
-        color: #ff0;
-        background-color: transparent;
-        border-color: transparent;
-        transition: all .5s;
-    }
-    
-    .button-effect-12::before,
-    .button-effect-12::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: 20px;
-        height: 20px;
-        background-color: #ff0;
-        border-radius: 50%;
-        transform: translateY(-50%);
-        transition: all .3s;
-        z-index: -1;
-        opacity: 0;
-    }
-    
-    .button-effect-12::before {
-        left: 0;
-        box-shadow: -100px 0 0 #ff0;
-    }
-    
-    .button-effect-12::after {
-        right: 0;
-        box-shadow: 100px 0 0 #ff0;
-    }
-    
-    .button-effect-12:hover::before {
-        left: 50%;
-        box-shadow: 30px 0 0 #ff0;
-        transform: translateX(-50%) translateY(-50%);
-        opacity: 1;
-    }
-    
-    .button-effect-12:hover::after {
-        right: 50%;
-        box-shadow: -30px 0 0 #ff0;
-        transform: translateX(50%) translateY(-50%);
-        opacity: 1;
-    }
-    
-    .button-effect-12 span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #ff0;
-        border-radius: 10px;
-        transform: scale(0);
-        transition: all 0.3s;
-        z-index: -1;
-    }
-    
-    .button-effect-12:hover span {
-        transform: scale(1);
-        transition-delay: 0.4s;
-    }
-    
-    .button-effect-12:hover {
-        color: #262626;
-        transition-delay: .4s;
-    }
-    /* №13------------------------------------------------------------------------------------------ */
-    
-    .button-effect-13 {
-        background-color: transparent;
-        text-align: center;
-        font-weight: bold;
-        transition: all .2s;
-        border: none;
-        border-radius: 0;
-        color: white;
-        overflow: visible;
-        perspective: 1000px;
-    }
-    
-    .button-effect-13::before {
-        content: '';
-        position: absolute;
-        top: -3px;
-        left: -3px;
-        width: 100%;
-        height: 100%;
-        background-color: #20caff;
-        z-index: -1;
-        mix-blend-mode: multiply;
-        transition: all .2s;
-        transform-origin: top;
-    }
-    
-    .button-effect-13::after {
-        content: '';
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 100%;
-        height: 100%;
-        background-color: #ff7675;
-        z-index: -1;
-        mix-blend-mode: multiply;
-        transition: all .2s;
-        transform-origin: bottom;
-    }
-    
-    .button-effect-13:hover::before {
-        top: -6px;
-        left: 0;
-        transform: rotateX(75deg);
-    }
-    
-    .button-effect-13:hover::after {
-        top: 6px;
-        left: 0;
-        transform: rotateX(-75deg);
-    }
-    /* №14------------------------------------------------------------------------------------------ */
-    
-    .button-effect-14 {
-        color: #f6b93b;
-        border-color: #f6b93b;
-        transition: all .5s;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1440 - 320)));
-    }
-    
-    .s14 {
-        /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px; */
-        padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
-        padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
-        padding-left: calc(40px + (50 - 40) * ((100vw - 320px) / (1440 - 320)));
-        padding-right: calc(40px + (50 - 40) * ((100vw - 320px) / (1440 - 320)));
-    }
-    
-    .button-effect-14::before,
-    .button-effect-14::after,
-    .s14::before,
-    .s14::after {
-        content: '';
-        position: absolute;
-        width: 25%;
-        height: 100%;
-        background-color: #f6b93b;
-        z-index: -1;
-        transition: all .2s;
-    }
-    
-    .button-effect-14::before {
-        top: 0;
-        left: -25%;
-    }
-    
-    .button-effect-14:hover::before {
-        top: 0;
-        left: 0;
-    }
-    
-    .button-effect-14::after {
-        top: -100%;
-        left: 25%;
-        transition-delay: .1s;
-    }
-    
-    .button-effect-14:hover::after {
-        top: 0;
-        left: 25%;
-    }
-    
-    .s14::before {
-        top: 100%;
-        right: 25%;
-        transition-delay: .2s;
-    }
-    
-    .s14:hover:before {
-        top: 0;
-        right: 25%;
-    }
-    
-    .s14::after {
-        top: 0;
-        right: -25%;
-        transition-delay: .3s;
-    }
-    
-    .s14:hover::after {
-        top: 0;
-        right: 0;
-    }
-    
-    .button-effect-14:hover {
-        color: #222;
-    }
-    /* №15------------------------------------------------------------------------------------------ */
-    
-    .button-effect-15 {
-        color: #fdc518;
-        border: none;
-        border-radius: 0%;
-        overflow: visible;
-    }
-    
-    .button-effect-15::before {
-        content: '';
-        position: absolute;
-        height: 130%;
-        width: 100%;
-        top: -15%;
-        left: 0;
-        border-left: 2px solid red;
-        border-right: 2px solid #fdc518;
-        transition: all .4s;
-    }
-    
-    .button-effect-15::after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 105%;
-        top: 0;
-        left: -2.5%;
-        border-top: 2px solid red;
-        border-bottom: 2px solid #fdc518;
-        transition: all .4s;
-        transition-delay: .4s;
-    }
-    
-    .button-effect-15:hover::before {
-        transform: rotateY(180deg);
-    }
-    
-    .button-effect-15:hover::after {
-        transform: rotateX(180deg);
-    }
-    /* №16------------------------------------------------------------------------------------------ */
-    
-    .button-effect-16 {
-        border: none;
-        border-radius: 0;
-        background-color: #c47135;
-        overflow: visible;
-    }
-    
-    .button-effect-16::before {
-        content: '';
-        position: absolute;
-        width: 15%;
-        height: 50%;
-        top: -5px;
-        left: -5px;
-        border-top: 2px solid #c47135;
-        border-left: 2px solid #c47135;
-        transition: all 1s;
-    }
-    
-    .button-effect-16::after {
-        content: '';
-        position: absolute;
-        width: 15%;
-        height: 50%;
-        bottom: -5px;
-        right: -5px;
-        border-bottom: 2px solid #c47135;
-        border-right: 2px solid #c47135;
-        transition: all .7s;
-    }
-    
-    .button-effect-16:hover::before,
-    .button-effect-16:hover::after {
-        width: 100%;
-        height: 100%;
-    }
-    /* №17------------------------------------------------------------------------------------------ */
-    
-    .button-effect-17 {
-        border-radius: 0;
-        background-color: white;
-        color: black;
-        border-color: black;
-        overflow: visible;
-        transition: all .2s;
-    }
-    
-    .button-effect-17:hover {
-        color: white;
-        background-color: rgb(228, 227, 227);
-    }
-    
-    .button-effect-17::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        z-index: -1;
-        opacity: 0;
-        transition: all .8s;
-    }
-    
-    .button-effect-17:hover::before {
-        opacity: 1;
-        transform: rotate(15deg);
-    }
-    
-    .s17 {
-        color: transparent;
-        position: relative;
-    }
-    
-    .s17::before {
-        content: 'B';
-        position: absolute;
-        color: black;
-        transition: all .5s;
-    }
-    
-    .button-effect-17:hover .s17::before {
-        color: white;
-        font-size: calc(56px + (80 - 56) * ((100vw - 320px) / (1440 - 320)));
-        transform: translate(-65%, -50%) rotate(360deg);
-    }
-    /* №18------------------------------------------------------------------------------------------ */
-    
-    .button-effect-18 {
-        border-radius: 0;
-        transition: all .2s;
-        border: none;
-    }
-    
-    .button-effect-18::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 4px;
-        background-color: white;
-        transition: all .5s;
-    }
-    
-    .button-effect-18:hover:before {
-        left: 0;
-    }
-    
-    .button-effect-18::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: -100%;
-        width: 100%;
-        height: 4px;
-        background-color: white;
-        transition: all .5s;
-    }
-    
-    .button-effect-18:hover:after {
-        right: 0;
-        /* transition-delay: .8s; */
-    }
-    
-    .s18::after {
-        content: '';
-        position: absolute;
-        top: -100%;
-        right: 0;
-        width: 4px;
-        height: 100%;
-        background-color: white;
-        transition: all .5s;
-    }
-    
-    .button-effect-18:hover .s18:after {
-        top: 0;
-        /* transition-delay: .4s; */
-    }
-    
-    .s18::before {
-        content: '';
-        position: absolute;
-        bottom: -100%;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background-color: white;
-        transition: all .5s;
-    }
-    
-    .button-effect-18:hover .s18:before {
-        bottom: 0;
-        /* transition-delay: 1.2s; */
-    }
-    /* №19------------------------------------------------------------------------------------------ */
-    
-    .button-effect-19 {
-        border-radius: 0;
-        border-color: #00aeff;
-        color: #00aeff;
-        transition: all .5s;
-    }
-    
-    .button-effect-19:hover .wave {
-        top: 0;
-    }
-    
-    .button-effect-19:hover {
-        color: white
-    }
-    
-    .wave {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: calc(100% + 22px);
-        background-color: #00aeff;
-        transition: all 1s;
-        z-index: -1;
-    }
-    
-    .wave::before {
-        content: '';
-        position: absolute;
-        top: -22px;
-        left: 0;
-        width: 100%;
-        height: 22px;
-        background: url(./img/buttons/btn18/wave.png);
-        animation: wavy .5s linear infinite;
-    }
-    
-    @keyframes wavy {
-        0% {
-            background-position-x: 0;
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+        /* Обнуление */
+        
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
         }
-        100% {
-            background-position-x: 70%;
+        
+        a {
+            text-decoration: none;
         }
-    }
-    /* №20------------------------------------------------------------------------------------------ */
-    
-    .button-effect-20 {
-        border-radius: 0;
-        border: none;
-        background-color: white;
-        color: black;
-        text-transform: uppercase;
-        transition: all .8s;
-        /* overflow: visible; */
-    }
-    
-    .s20 {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: transparent;
-        border: 4px solid #cb8452;
-        z-index: -1;
-    }
-    
-    .s20::before {
-        content: '';
-        position: absolute;
-        width: 8%;
-        height: 500%;
-        background-color: white;
-        top: 50%;
-        left: 50%;
-        transition: all .8s;
-        transform: translate(-50%, -50%) rotate(-60deg);
-        border-top: 2px solid red;
-    }
-    
-    .button-effect-20:hover .s20::before {
-        width: 100%;
-        height: 500px;
-        background-color: rgb(64, 1, 73);
-        transform: translate(-50%, -50%) rotate(60deg);
-    }
-    
-    .button-effect-20:hover {
-        color: white;
-    }
-    /* №21------------------------------------------------------------------------------------------ */
-    
-    .button-effect-21 {
-        border-radius: 0;
-        border: none;
-        background-color: transparent;
-        color: white;
-        text-transform: uppercase;
-        transition: all .8s;
-        overflow: visible;
-    }
-    
-    .button-effect-21::before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 40%;
-        left: 10%;
-        top: -5px;
-        background-color: yellow;
-        opacity: .7;
-        transform: skewX(30deg);
-        z-index: -1;
-        transition: all .3s cubic-bezier(.68, -0.55, 0.265, 1.55);
-    }
-    
-    .button-effect-21:hover:before {
-        left: 50%;
-        top: 0;
-        width: 50%;
-        transform: skewX(0);
-    }
-    
-    .button-effect-21::after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 40%;
-        left: 52%;
-        top: 5px;
-        background-color: blue;
-        transform: skewX(30deg);
-        z-index: -1;
-        transition: all .3s cubic-bezier(.68, -1, 0.265, 1.55);
-    }
-    
-    .button-effect-21:hover::after {
-        left: 0%;
-        top: 0;
-        width: 50%;
-        transform: skewX(0);
-    }
-    /* №22------------------------------------------------------------------------------------------ */
-    
-    .button-effect-22 {
-        border-radius: 100px;
-        border: none;
-        background-color: white;
-        color: #777;
-        text-transform: uppercase;
-        transition: all .2s;
-        overflow: visible;
-    }
-    
-    .button-effect-22::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        border-radius: 100px;
-        z-index: -1;
-        transition: all .7s;
-    }
-    
-    .button-effect-22:hover::before {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-    }
-    
-    .button-effect-22:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(227, 233, 247, 0.5)
-    }
-    
-    .button-effect-22:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(227, 233, 247, 0.5)
-    }
-    /* №23------------------------------------------------------------------------------------------ */
-    
-    .button-effect-23 {
-        border-radius: 0;
-        border-color: #fa03a8;
-        background-color: white;
-        color: #fa03a8;
-        text-transform: uppercase;
-        transition: all .2s;
-    }
-    
-    .button-effect-23::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        /* left: 0;
+        
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+        
+        img {
+            vertical-align: top;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: inherit;
+            font-size: inherit;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            line-height: 1;
+            font-size: 16px;
+            /* background-color: #0d0129; */
+            background: #0f0c29;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        /* HEADER--------------------------------------------------------------------------------------------------------- */
+        
+        .header {
+            background-color: #011929;
+            padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+            text-align: center;
+        }
+        /* MAIN--------------------------------------------------------------------------------------------------------- */
+        
+        .main {
+            padding: 0 15px 0 15px;
+            flex: 1 1 auto;
+        }
+        
+        .container {
+            margin: 0 auto;
+            max-width: 1440px;
+            margin-bottom: calc(40px + (70 - 20) * ((100vw - 320px) / (1440 - 320)));
+        }
+        
+        .title {
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 900;
+            letter-spacing: 0.3125rem;
+            text-align: center;
+            padding-top: 30px;
+            margin-bottom: calc(15px + (50 - 20) * ((100vw - 320px) / (1440 - 320)));
+            color: #fff;
+            text-transform: uppercase;
+        }
+        /* MAIN - BUTTONS--------------------------------------------------------------------------------------------------------- */
+        
+        .buttons-container {
+            display: grid;
+            gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        
+        .btn {
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(234, 231, 239);
+            font-family: 'Roboto', sans-serif;
+            font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 700;
+            letter-spacing: 0.3125rem;
+            border: 3px solid #9899b3;
+            /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))); */
+            padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+            padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+            padding-left: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+            padding-right: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            border-radius: 10px;
+        }
+        /* №1------------------------------------------------------------------------------------------ */
+        
+        .button-effect-1:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgb(255, 255, 0);
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            transform-origin: bottom left;
+            transform: rotate(-90deg);
+            transition: transform 1s;
+        }
+        
+        .button-effect-1:hover:before {
+            transform: rotate(0deg);
+        }
+        /* №2------------------------------------------------------------------------------------------ */
+        
+        .button-effect-2 {
+            transition: all 1s;
+        }
+        
+        .button-effect-2:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #351435;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+        
+        .button-effect-2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #35014b;
+            z-index: -1;
+            transform: translateX(100%);
+            transition: all 1s;
+        }
+        
+        .button-effect-2:hover:before {
+            transform: translateX(-50%);
+        }
+        
+        .button-effect-2:hover::after {
+            transform: translateX(49%);
+        }
+        
+        .button-effect-2:hover {
+            color: white;
+        }
+        /* №3------------------------------------------------------------------------------------------ */
+        
+        .button-effect-3 {
+            color: #767575;
+            transition: all 1s;
+        }
+        
+        .button-effect-3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #262626;
+            transition: 1s;
+            transform: rotateX(90deg);
+        }
+        
+        .button-effect-3::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #262626;
+            transition: 1s;
+            transform: rotateY(90deg);
+        }
+        
+        .button-effect-3:hover::before {
+            transform: rotateX(0deg);
+        }
+        
+        .button-effect-3:hover::after {
+            transform: rotateY(0deg);
+        }
+        
+        .button-effect-3:hover {
+            color: white;
+        }
+        /* №4------------------------------------------------------------------------------------------ */
+        
+        .button-effect-4 {
+            color: #e1332d;
+            transition: all 1s;
+            border-color: #e1332d;
+            font-weight: 300;
+            letter-spacing: -0.2rem;
+            transition: all .5s;
+        }
+        
+        .button-effect-4:hover {
+            font-weight: 900;
+            letter-spacing: 0.4375rem;
+            border: 3px solid #ddff00;
+        }
+        /* №5------------------------------------------------------------------------------------------ */
+        
+        .button-effect-5 {
+            color: white;
+            border: 3px solid #fff;
+            transition: all 1s;
+        }
+        
+        .button-effect-5::before {
+            content: 'YEAH!';
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f44336;
+            transition: 1s;
+            transform: translateY(-100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .button-effect-5:hover:before {
+            transform: translateY(0)
+        }
+        /* №6------------------------------------------------------------------------------------------ */
+        
+        .button-effect-6 {
+            color: white;
+            border: 3px solid white;
+            transition: all 1s;
+        }
+        
+        .button-effect-6:hover {
+            background-color: #f44336;
+        }
+        
+        .button-effect-6::before {
+            content: '';
+            background-color: white;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            transform: translateX(-100%) rotate(45deg);
+            transition: all .6s;
+        }
+        
+        .button-effect-6:hover::before {
+            transform: translateX(100%) rotate(45deg);
+        }
+        /* №7------------------------------------------------------------------------------------------ */
+        
+        .button-effect-7 {
+            background-color: #262626;
+            color: transparent;
+        }
+        
+        .button-effect-7::before {
+            content: 'button-7';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #fffa65;
+            color: #262626;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .5s;
+        }
+        
+        .button-effect-7::after {
+            content: 'button-7';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #fffa65;
+            color: #262626;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .5s;
+            transform: translate(-100%, 100%);
+        }
+        
+        .button-effect-7:hover::before {
+            transform: translate(100%, -100%);
+        }
+        
+        .button-effect-7:hover::after {
+            transform: translate(0%, 0%);
+        }
+        /* №8------------------------------------------------------------------------------------------ */
+        
+        .button-effect-8 {
+            transition: all .5s;
+        }
+        
+        .button-effect-8::before {
+            content: 'button-8';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #262626;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(5);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        
+        .button-effect-8:hover::before {
+            transform: scale(1);
+            opacity: 1;
+        }
+        /* №9------------------------------------------------------------------------------------------ */
+        
+        .button-effect-9 {
+            border: 3px solid tomato;
+            background: none;
+            color: tomato;
+            transition: all .5s;
+        }
+        
+        .button-effect-9::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: tomato;
+            z-index: -1;
+            border-radius: 0 0 50% 50%;
+            height: 0;
+            transition: all .5s;
+        }
+        
+        .button-effect-9:hover::before {
+            height: 190%;
+        }
+        
+        .button-effect-9:hover {
+            color: white;
+        }
+        /* №10------------------------------------------------------------------------------------------ */
+        
+        .button-effect-10 {
+            background-color: #f1c40f;
+            color: white;
+            overflow: visible;
+            border-radius: 0%;
+        }
+        
+        .button-effect-10::before {
+            content: "Let's";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2ce771;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateX(270deg);
+            transform-origin: top;
+            transition: all .5s;
+            border-bottom: 1px solid #262626;
+            border-right: 1px solid #262626;
+        }
+        
+        .button-effect-10::after {
+            content: 'go!';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateX(270deg);
+            transform-origin: top;
+            transition: all .5s;
+            border-bottom: 1px solid #262626;
+            border-right: 1px solid #262626;
+            transition-delay: .25s;
+        }
+        
+        .button-effect-10:hover::before,
+        .button-effect-10:hover::after {
+            transform: rotateX(0deg);
+        }
+        /* №11------------------------------------------------------------------------------------------ */
+        
+        .button-effect-11 {
+            color: transparent;
+            border-color: #ff0;
+        }
+        
+        .button-effect-11::before {
+            content: 'button-11';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #363636;
+            color: #ff0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+        }
+        
+        .button-effect-11:hover::before {
+            left: 100%;
+            opacity: 0;
+            transform: scale(0) rotateY(360deg);
+        }
+        
+        .button-effect-11::after {
+            content: 'button-11';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #363636;
+            color: #ff0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0) rotateY(0);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        .button-effect-11:hover::after {
+            left: 0;
+            opacity: 1;
+            transform: scale(1) rotateY(360deg);
+        }
+        /* №12------------------------------------------------------------------------------------------ */
+        
+        .button-effect-12 {
+            overflow: visible;
+            color: #ff0;
+            background-color: transparent;
+            border-color: transparent;
+            transition: all .5s;
+        }
+        
+        .button-effect-12::before,
+        .button-effect-12::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #ff0;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            transition: all .3s;
+            z-index: -1;
+            opacity: 0;
+        }
+        
+        .button-effect-12::before {
+            left: 0;
+            box-shadow: -100px 0 0 #ff0;
+        }
+        
+        .button-effect-12::after {
+            right: 0;
+            box-shadow: 100px 0 0 #ff0;
+        }
+        
+        .button-effect-12:hover::before {
+            left: 50%;
+            box-shadow: 30px 0 0 #ff0;
+            transform: translateX(-50%) translateY(-50%);
+            opacity: 1;
+        }
+        
+        .button-effect-12:hover::after {
+            right: 50%;
+            box-shadow: -30px 0 0 #ff0;
+            transform: translateX(50%) translateY(-50%);
+            opacity: 1;
+        }
+        
+        .button-effect-12 span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff0;
+            border-radius: 10px;
+            transform: scale(0);
+            transition: all 0.3s;
+            z-index: -1;
+        }
+        
+        .button-effect-12:hover span {
+            transform: scale(1);
+            transition-delay: 0.4s;
+        }
+        
+        .button-effect-12:hover {
+            color: #262626;
+            transition-delay: .4s;
+        }
+        /* №13------------------------------------------------------------------------------------------ */
+        
+        .button-effect-13 {
+            background-color: transparent;
+            text-align: center;
+            font-weight: bold;
+            transition: all .2s;
+            border: none;
+            border-radius: 0;
+            color: white;
+            overflow: visible;
+            perspective: 1000px;
+        }
+        
+        .button-effect-13::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 100%;
+            height: 100%;
+            background-color: #20caff;
+            z-index: -1;
+            mix-blend-mode: multiply;
+            transition: all .2s;
+            transform-origin: top;
+        }
+        
+        .button-effect-13::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 100%;
+            height: 100%;
+            background-color: #ff7675;
+            z-index: -1;
+            mix-blend-mode: multiply;
+            transition: all .2s;
+            transform-origin: bottom;
+        }
+        
+        .button-effect-13:hover::before {
+            top: -6px;
+            left: 0;
+            transform: rotateX(75deg);
+        }
+        
+        .button-effect-13:hover::after {
+            top: 6px;
+            left: 0;
+            transform: rotateX(-75deg);
+        }
+        /* №14------------------------------------------------------------------------------------------ */
+        
+        .button-effect-14 {
+            color: #f6b93b;
+            border-color: #f6b93b;
+            transition: all .5s;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1440 - 320)));
+        }
+        
+        .s14 {
+            /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) 50px; */
+            padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+            padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+            padding-left: calc(40px + (50 - 40) * ((100vw - 320px) / (1440 - 320)));
+            padding-right: calc(40px + (50 - 40) * ((100vw - 320px) / (1440 - 320)));
+        }
+        
+        .button-effect-14::before,
+        .button-effect-14::after,
+        .s14::before,
+        .s14::after {
+            content: '';
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: #f6b93b;
+            z-index: -1;
+            transition: all .2s;
+        }
+        
+        .button-effect-14::before {
+            top: 0;
+            left: -25%;
+        }
+        
+        .button-effect-14:hover::before {
+            top: 0;
+            left: 0;
+        }
+        
+        .button-effect-14::after {
+            top: -100%;
+            left: 25%;
+            transition-delay: .1s;
+        }
+        
+        .button-effect-14:hover::after {
+            top: 0;
+            left: 25%;
+        }
+        
+        .s14::before {
+            top: 100%;
+            right: 25%;
+            transition-delay: .2s;
+        }
+        
+        .s14:hover:before {
+            top: 0;
+            right: 25%;
+        }
+        
+        .s14::after {
+            top: 0;
+            right: -25%;
+            transition-delay: .3s;
+        }
+        
+        .s14:hover::after {
+            top: 0;
+            right: 0;
+        }
+        
+        .button-effect-14:hover {
+            color: #222;
+        }
+        /* №15------------------------------------------------------------------------------------------ */
+        
+        .button-effect-15 {
+            color: #fdc518;
+            border: none;
+            border-radius: 0%;
+            overflow: visible;
+        }
+        
+        .button-effect-15::before {
+            content: '';
+            position: absolute;
+            height: 130%;
+            width: 100%;
+            top: -15%;
+            left: 0;
+            border-left: 2px solid red;
+            border-right: 2px solid #fdc518;
+            transition: all .4s;
+        }
+        
+        .button-effect-15::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 105%;
+            top: 0;
+            left: -2.5%;
+            border-top: 2px solid red;
+            border-bottom: 2px solid #fdc518;
+            transition: all .4s;
+            transition-delay: .4s;
+        }
+        
+        .button-effect-15:hover::before {
+            transform: rotateY(180deg);
+        }
+        
+        .button-effect-15:hover::after {
+            transform: rotateX(180deg);
+        }
+        /* №16------------------------------------------------------------------------------------------ */
+        
+        .button-effect-16 {
+            border: none;
+            border-radius: 0;
+            background-color: #c47135;
+            overflow: visible;
+        }
+        
+        .button-effect-16::before {
+            content: '';
+            position: absolute;
+            width: 15%;
+            height: 50%;
+            top: -5px;
+            left: -5px;
+            border-top: 2px solid #c47135;
+            border-left: 2px solid #c47135;
+            transition: all 1s;
+        }
+        
+        .button-effect-16::after {
+            content: '';
+            position: absolute;
+            width: 15%;
+            height: 50%;
+            bottom: -5px;
+            right: -5px;
+            border-bottom: 2px solid #c47135;
+            border-right: 2px solid #c47135;
+            transition: all .7s;
+        }
+        
+        .button-effect-16:hover::before,
+        .button-effect-16:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+        /* №17------------------------------------------------------------------------------------------ */
+        
+        .button-effect-17 {
+            border-radius: 0;
+            background-color: white;
+            color: black;
+            border-color: black;
+            overflow: visible;
+            transition: all .2s;
+        }
+        
+        .button-effect-17:hover {
+            color: white;
+            background-color: rgb(228, 227, 227);
+        }
+        
+        .button-effect-17::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: -1;
+            opacity: 0;
+            transition: all .8s;
+        }
+        
+        .button-effect-17:hover::before {
+            opacity: 1;
+            transform: rotate(15deg);
+        }
+        
+        .s17 {
+            color: transparent;
+            position: relative;
+        }
+        
+        .s17::before {
+            content: 'B';
+            position: absolute;
+            color: black;
+            transition: all .5s;
+        }
+        
+        .button-effect-17:hover .s17::before {
+            color: white;
+            font-size: calc(56px + (80 - 56) * ((100vw - 320px) / (1440 - 320)));
+            transform: translate(-65%, -50%) rotate(360deg);
+        }
+        /* №18------------------------------------------------------------------------------------------ */
+        
+        .button-effect-18 {
+            border-radius: 0;
+            transition: all .2s;
+            border: none;
+        }
+        
+        .button-effect-18::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background-color: white;
+            transition: all .5s;
+        }
+        
+        .button-effect-18:hover:before {
+            left: 0;
+        }
+        
+        .button-effect-18::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 4px;
+            background-color: white;
+            transition: all .5s;
+        }
+        
+        .button-effect-18:hover:after {
+            right: 0;
+            /* transition-delay: .8s; */
+        }
+        
+        .s18::after {
+            content: '';
+            position: absolute;
+            top: -100%;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background-color: white;
+            transition: all .5s;
+        }
+        
+        .button-effect-18:hover .s18:after {
+            top: 0;
+            /* transition-delay: .4s; */
+        }
+        
+        .s18::before {
+            content: '';
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: white;
+            transition: all .5s;
+        }
+        
+        .button-effect-18:hover .s18:before {
+            bottom: 0;
+            /* transition-delay: 1.2s; */
+        }
+        /* №19------------------------------------------------------------------------------------------ */
+        
+        .button-effect-19 {
+            border-radius: 0;
+            border-color: #00aeff;
+            color: #00aeff;
+            transition: all .5s;
+        }
+        
+        .button-effect-19:hover .wave {
+            top: 0;
+        }
+        
+        .button-effect-19:hover {
+            color: white
+        }
+        
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: calc(100% + 22px);
+            background-color: #00aeff;
+            transition: all 1s;
+            z-index: -1;
+        }
+        
+        .wave::before {
+            content: '';
+            position: absolute;
+            top: -22px;
+            left: 0;
+            width: 100%;
+            height: 22px;
+            background: url(./img/buttons/btn18/wave.png);
+            animation: wavy .5s linear infinite;
+        }
+        
+        @keyframes wavy {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 70%;
+            }
+        }
+        /* №20------------------------------------------------------------------------------------------ */
+        
+        .button-effect-20 {
+            border-radius: 0;
+            border: none;
+            background-color: white;
+            color: black;
+            text-transform: uppercase;
+            transition: all .8s;
+            /* overflow: visible; */
+        }
+        
+        .s20 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            border: 4px solid #cb8452;
+            z-index: -1;
+        }
+        
+        .s20::before {
+            content: '';
+            position: absolute;
+            width: 8%;
+            height: 500%;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transition: all .8s;
+            transform: translate(-50%, -50%) rotate(-60deg);
+            border-top: 2px solid red;
+        }
+        
+        .button-effect-20:hover .s20::before {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(64, 1, 73);
+            transform: translate(-50%, -50%) rotate(60deg);
+        }
+        
+        .button-effect-20:hover {
+            color: white;
+        }
+        /* №21------------------------------------------------------------------------------------------ */
+        
+        .button-effect-21 {
+            border-radius: 0;
+            border: none;
+            background-color: transparent;
+            color: white;
+            text-transform: uppercase;
+            transition: all .8s;
+            overflow: visible;
+        }
+        
+        .button-effect-21::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 40%;
+            left: 10%;
+            top: -5px;
+            background-color: yellow;
+            opacity: .7;
+            transform: skewX(30deg);
+            z-index: -1;
+            transition: all .3s cubic-bezier(.68, -0.55, 0.265, 1.55);
+        }
+        
+        .button-effect-21:hover:before {
+            left: 50%;
+            top: 0;
+            width: 50%;
+            transform: skewX(0);
+        }
+        
+        .button-effect-21::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 40%;
+            left: 52%;
+            top: 5px;
+            background-color: blue;
+            transform: skewX(30deg);
+            z-index: -1;
+            transition: all .3s cubic-bezier(.68, -1, 0.265, 1.55);
+        }
+        
+        .button-effect-21:hover::after {
+            left: 0%;
+            top: 0;
+            width: 50%;
+            transform: skewX(0);
+        }
+        /* №22------------------------------------------------------------------------------------------ */
+        
+        .button-effect-22 {
+            border-radius: 100px;
+            border: none;
+            background-color: white;
+            color: #777;
+            text-transform: uppercase;
+            transition: all .2s;
+            overflow: visible;
+        }
+        
+        .button-effect-22::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 100px;
+            z-index: -1;
+            transition: all .7s;
+        }
+        
+        .button-effect-22:hover::before {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+        
+        .button-effect-22:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(227, 233, 247, 0.5)
+        }
+        
+        .button-effect-22:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(227, 233, 247, 0.5)
+        }
+        /* №23------------------------------------------------------------------------------------------ */
+        
+        .button-effect-23 {
+            border-radius: 0;
+            border-color: #fa03a8;
+            background-color: white;
+            color: #fa03a8;
+            text-transform: uppercase;
+            transition: all .2s;
+        }
+        
+        .button-effect-23::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            /* left: 0;
     bottom: 0; */
-        left: 0;
-        background-color: #fa03a8;
-        z-index: -1;
-        border-top: 28px solid #fa03a8;
-        border-bottom: 28px solid #fa03a8;
-        border-right: 28px solid white;
-        transition: all .3s;
-        transform: translateX(-100%);
-    }
-    
-    .button-effect-23:hover::before {
-        transform: translateX(0);
-        border-right: 28px solid transparent;
-    }
-    
-    .button-effect-23::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        /* left: 0;
+            left: 0;
+            background-color: #fa03a8;
+            z-index: -1;
+            border-top: 28px solid #fa03a8;
+            border-bottom: 28px solid #fa03a8;
+            border-right: 28px solid white;
+            transition: all .3s;
+            transform: translateX(-100%);
+        }
+        
+        .button-effect-23:hover::before {
+            transform: translateX(0);
+            border-right: 28px solid transparent;
+        }
+        
+        .button-effect-23::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            /* left: 0;
     bottom: 0; */
-        right: 0;
-        background-color: #fa03a8;
-        z-index: -1;
-        border-top: 28px solid #fa03a8;
-        border-bottom: 28px solid #fa03a8;
-        border-left: 28px solid white;
-        transition: all .3s;
-        transform: translateX(100%);
-    }
-    
-    .button-effect-23:hover::after {
-        transform: translateX(0);
-        border-left: 28px solid transparent;
-    }
-    
-    .button-effect-23:hover {
-        color: white;
-    }
-    /* IMAGE EFFECTS--------------------------------------------------------------------------------------------------------- */
-    
-    .container-images {}
-    
-    .images-wrapper {
-        display: grid;
-        gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    
-    .image-item {
-        overflow: hidden;
-        max-width: 500px;
-        max-height: 500px;
-        position: relative;
-    }
-    
-    .image {
-        object-fit: fill;
-        width: 100%;
-        /* height: 100%; */
-    }
-    /* IMG-1--------------------------------------------------------------------------------------------------------- */
-    
-    .img1 {
-        transition: all 0.5s;
-    }
-    
-    .img1-caption {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0);
-        transition: all .5s;
-    }
-    
-    .img1-caption-title {
-        text-transform: uppercase;
-        font-size: 30px;
-        font-weight: 900;
-        margin-bottom: .7em;
-        letter-spacing: 2px;
-    }
-    
-    .img1-caption-text {
-        font-size: 18px;
-        text-transform: capitalize;
-    }
-    
-    .image-item-1:hover .img1-caption {
-        opacity: 1;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    
-    .image-item-1:hover .img1 {
-        transform: scale(1.3) rotate(15deg);
-    }
-    /* IMG-2--------------------------------------------------------------------------------------------------------- */
-    
-    .img2 {
-        transition: all 0.5s;
-    }
-    
-    .img2-caption {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0);
-        transform: translateX(-100%);
-        transition: all .5s;
-    }
-    
-    .img2-caption-title {
-        text-transform: uppercase;
-        font-size: 30px;
-        font-weight: 900;
-        margin-bottom: .7em;
-        letter-spacing: 2px;
-    }
-    
-    .img2-caption-text {
-        font-size: 18px;
-        text-transform: capitalize;
-    }
-    
-    .image-item-2:hover .img2-caption {
-        background-color: rgba(0, 0, 0, 0.5);
-        transform: translateX(0);
-    }
-    
-    .image-item-2:hover .img2 {
-        transform: scale(1.3) rotate(-15deg);
-    }
-    /* IMG-3--------------------------------------------------------------------------------------------------------- */
-    
-    .img3 {
-        transition: all 0.5s;
-    }
-    
-    .img3-caption {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0);
-        transform: translateX(-100%);
-        transition: all .5s;
-    }
-    
-    .img3-caption-title {
-        text-transform: uppercase;
-        font-size: 30px;
-        font-weight: 900;
-        margin-bottom: .7em;
-        letter-spacing: 2px;
-    }
-    
-    .img3-caption-text {
-        font-size: 18px;
-        text-transform: capitalize;
-    }
-    
-    .image-item-3:hover .img3-caption {
-        background-color: rgba(0, 0, 0, 1);
-        transform: translateX(0);
-    }
-    
-    .image-item-3:hover .img3 {
-        transform: translateX(100%);
-    }
-    /* IMG-4--------------------------------------------------------------------------------------------------------- */
-    
-    .img4 {
-        transition: all 0.5s;
-    }
-    
-    .img4-caption {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        transform: translateY(100%);
-        transition: all .5s;
-    }
-    
-    .img4-caption-title {
-        text-transform: uppercase;
-        font-size: 30px;
-        font-weight: 900;
-        margin-bottom: .7em;
-        letter-spacing: 2px;
-    }
-    
-    .img4-caption-text {
-        font-size: 18px;
-        text-transform: capitalize;
-    }
-    
-    .image-item-4:hover .img4-caption {
-        background-color: rgba(0, 0, 0, 1);
-        transform: translateY(0%);
-    }
-    
-    .image-item-4:hover .img4 {
-        transform: translateY(-30%);
-    }
-    /* FOOTER--------------------------------------------------------------------------------------------------------- */
-    
-    .footer {
-        background-color: #011929;
-        padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
-        text-align: center;
-    }
+            right: 0;
+            background-color: #fa03a8;
+            z-index: -1;
+            border-top: 28px solid #fa03a8;
+            border-bottom: 28px solid #fa03a8;
+            border-left: 28px solid white;
+            transition: all .3s;
+            transform: translateX(100%);
+        }
+        
+        .button-effect-23:hover::after {
+            transform: translateX(0);
+            border-left: 28px solid transparent;
+        }
+        
+        .button-effect-23:hover {
+            color: white;
+        }
+        /* IMAGE EFFECTS--------------------------------------------------------------------------------------------------------- */
+        
+        .container-images {}
+        
+        .images-wrapper {
+            display: grid;
+            gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        
+        .image-item {
+            overflow: hidden;
+            max-width: 500px;
+            max-height: 500px;
+            position: relative;
+            border-radius: 10px;
+        }
+        
+        .image {
+            object-fit: fill;
+            width: 100%;
+            /* height: 100%; */
+        }
+        /* IMG-1--------------------------------------------------------------------------------------------------------- */
+        
+        .img1 {
+            transition: all 0.5s;
+            object-fit: cover;
+            height: 100%;
+        }
+        
+        .img1-caption {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0);
+            transition: all .5s;
+        }
+        
+        .img1-caption-title {
+            text-transform: uppercase;
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 900;
+            margin-bottom: .7em;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        .img1-caption-text {
+            font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1440 - 320)));
+            text-transform: capitalize;
+            text-align: center;
+        }
+        
+        .image-item-1:hover .img1-caption {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .image-item-1:hover .img1 {
+            transform: scale(1.3) rotate(15deg);
+        }
+        /* IMG-2--------------------------------------------------------------------------------------------------------- */
+        
+        .img2 {
+            transition: all 0.5s;
+            object-fit: cover;
+            height: 100%;
+        }
+        
+        .img2-caption {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+            transform: translateX(-100%);
+            transition: all .5s;
+        }
+        
+        .img2-caption-title {
+            text-transform: uppercase;
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 900;
+            margin-bottom: .7em;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        .img2-caption-text {
+            font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1440 - 320)));
+            text-transform: capitalize;
+            text-align: center;
+        }
+        
+        .image-item-2:hover .img2-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateX(0);
+        }
+        
+        .image-item-2:hover .img2 {
+            transform: scale(1.3) rotate(-15deg);
+        }
+        /* IMG-3--------------------------------------------------------------------------------------------------------- */
+        
+        .img3 {
+            transition: all 0.5s;
+            object-fit: cover;
+            height: 100%;
+        }
+        
+        .img3-caption {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+            transform: translateX(-100%);
+            transition: all .5s;
+        }
+        
+        .img3-caption-title {
+            text-transform: uppercase;
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 900;
+            margin-bottom: .7em;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        .img3-caption-text {
+            font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1440 - 320)));
+            text-transform: capitalize;
+            text-align: center;
+        }
+        
+        .image-item-3:hover .img3-caption {
+            background-color: rgba(0, 0, 0, 1);
+            transform: translateX(0);
+        }
+        
+        .image-item-3:hover .img3 {
+            transform: translateX(100%);
+        }
+        /* IMG-4--------------------------------------------------------------------------------------------------------- */
+        
+        .img4 {
+            transition: all 0.5s;
+        }
+        
+        .img4-caption {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            transform: translateY(100%);
+            transition: all .5s;
+        }
+        
+        .img4-caption-title {
+            text-transform: uppercase;
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 900;
+            margin-bottom: .7em;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        .img4-caption-text {
+            font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1440 - 320)));
+            text-transform: capitalize;
+            text-align: center;
+        }
+        
+        .image-item-4:hover .img4-caption {
+            background-color: rgba(0, 0, 0, 1);
+            transform: translateY(0%);
+        }
+        
+        .image-item-4:hover .img4 {
+            transform: translateY(-30%);
+        }
+        /* IMG-4--------------------------------------------------------------------------------------------------------- */
+        
+        .img5 {
+            transition: all 0.5s;
+            object-fit: cover;
+            height: 100%;
+        }
+        
+        .img5-caption {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: all .25s;
+        }
+        
+        .img5-caption-title {
+            text-transform: uppercase;
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 400;
+            margin-bottom: .7em;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        .img5-caption-text {
+            font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1440 - 320)));
+            text-transform: capitalize;
+            text-align: center;
+            background-color: #ae895d;
+            padding: 3px 5px;
+        }
+        
+        .image-item-5::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #006266;
+            opacity: .5;
+            transform: translateY(100%);
+            transition: all .25s;
+            transition-delay: .25s;
+        }
+        
+        .image-item-5:hover:before {
+            transform: translateY(0);
+            transition-delay: 0s;
+        }
+        
+        .image-item-5:hover .img5-caption {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+        
+        .image-item-5:hover .img5 {}
+        /* FOOTER--------------------------------------------------------------------------------------------------------- */
+        
+        .footer {
+            background-color: #011929;
+            padding: calc(15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)));
+            text-align: center;
+        }
