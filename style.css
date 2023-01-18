@@ -108,11 +108,11 @@ body {
     align-items: center;
     color: rgb(234, 231, 239);
     font-family: 'Roboto', sans-serif;
-    font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1440 - 320)));
+    /* font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1440 - 320))); */
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.3125rem;
     border: 3px solid #9899b3;
-    /* padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320))) calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))); */
     padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
     padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
     padding-left: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
@@ -1203,7 +1203,7 @@ body {
 .images-wrapper {
     display: grid;
     gap: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 450px));
 }
 
 .image-item {
