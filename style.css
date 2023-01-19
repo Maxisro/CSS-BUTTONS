@@ -985,6 +985,7 @@ body {
     0% {
         background-position-x: 0;
     }
+
     100% {
         background-position-x: 70%;
     }
@@ -2039,6 +2040,7 @@ body {
     .menu-list {
         flex-direction: column;
     }
+
     .menu-item {
         height: 300px;
         width: 80%;
@@ -2229,6 +2231,61 @@ body {
     transition-delay: .2s;
 }
 
+
+/* MENU-4--------------------------------------------------------------------------------------------------------- */
+
+.menu-item-4 {
+    background-color: white;
+}
+
+.menu4-list {}
+
+.menu4-list-item {
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+.menu4-btn {
+    display: block;
+    color: #222;
+    text-transform: uppercase;
+    position: relative;
+    transition: all .5s;
+    text-align: center;
+}
+
+
+.menu4-btn::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: #00bcd4;
+    top: 120%;
+    left: 0;
+    transition: all .5s;
+}
+
+.menu4-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: #f0f;
+    top: 120%;
+    right: 0;
+    transition: all .5s;
+}
+
+.menu4-btn:hover::before {
+    width: 50%;
+    transform: translateX(100%);
+}
+
+.menu4-btn:hover::after {
+    width: 50%;
+    transform: translateX(-100%);
+}
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
