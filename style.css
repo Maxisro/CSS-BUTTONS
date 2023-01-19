@@ -2006,6 +2006,7 @@ body {
     transition-delay: .5s;
 }
 
+
 /* MENU EFFECTS--------------------------------------------------------------------------------------------------------- */
 
 .container-menu {}
@@ -2021,36 +2022,42 @@ body {
 .menu-item {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    width: 100%;
+    height: 130px;
 }
 
-.menu-list{
+.menu-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-.menu-list-item{
-    
 
+@media (max-width: 426px) {
+    .menu-list {
+        flex-direction: column;
+    }
+    .menu-item {
+        height: 300px;
+    }
 }
-.menu-btn{
 
-}
+.menu-list-item {}
 
+.menu-btn {}
 
 
 /* MENU-1--------------------------------------------------------------------------------------------------------- */
+
 .menu-item-1 {
     background-color: #fffa65;
-    width: 100%;
-    height: 130px;
 }
-.menu1-list {
-}
-.menu1-list-item {
-    
-}
+
+.menu1-list {}
+
+.menu1-list-item {}
+
 .menu1-btn {
     color: #3d3d3d;
     font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1440 - 320)));
@@ -2058,7 +2065,8 @@ body {
     padding: 10px 15px;
     position: relative;
 }
-.menu1-btn::before{
+
+.menu1-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -2071,8 +2079,7 @@ body {
     transition: all .5s;
 }
 
-
-.menu1-btn::after{
+.menu1-btn::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -2084,22 +2091,23 @@ body {
     transform-origin: right;
     transition: all .5s;
 }
+
 .menu1-btn:hover::before,
-.menu1-btn:hover::after{
+.menu1-btn:hover::after {
     transform: scaleX(1);
 }
 
+
 /* MENU-2--------------------------------------------------------------------------------------------------------- */
+
 .menu-item-2 {
     background-color: white;
-    width: 100%;
-    height: 130px;
 }
-.menu2-list {
-}
-.menu2-list-item {
-    
-}
+
+.menu2-list {}
+
+.menu2-list-item {}
+
 .menu2-btn {
     display: block;
     padding: 5px 10px;
@@ -2112,7 +2120,8 @@ body {
     min-width: 120px;
     text-align: center;
 }
-.menu2-btn::before{
+
+.menu2-btn::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -2122,7 +2131,8 @@ body {
     border: 3px solid #e91e63;
     border-width: 0 0 3px 3px;
 }
-.menu2-btn::after{
+
+.menu2-btn::after {
     content: '';
     position: absolute;
     top: 0;
@@ -2133,11 +2143,12 @@ body {
     border-width: 3px 3px 0 0;
 }
 
-
 .menu2-btn:hover::before,
-.menu2-btn:hover::after{
+.menu2-btn:hover::after {
     transform: scaleX(1);
 }
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
