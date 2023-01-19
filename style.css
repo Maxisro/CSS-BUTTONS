@@ -2045,7 +2045,9 @@ body {
 
 .menu-list-item {}
 
-.menu-btn {}
+.menu-btn {
+    font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (1440 - 320)));
+}
 
 
 /* MENU-1--------------------------------------------------------------------------------------------------------- */
@@ -2060,7 +2062,6 @@ body {
 
 .menu1-btn {
     color: #3d3d3d;
-    font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1440 - 320)));
     display: block;
     padding: 10px 15px;
     position: relative;
@@ -2112,40 +2113,56 @@ body {
     display: block;
     padding: 5px 10px;
     margin: 10px 10px;
-    font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1440 - 320)));
     color: #272727;
     text-transform: uppercase;
     position: relative;
     transition: all .5s;
-    min-width: 120px;
+    /* min-width: 120px; */
     text-align: center;
+}
+
+.menu2-btn:hover {
+    background-color: #e91e63;
+    color: white;
+    transition-delay: .3s;
 }
 
 .menu2-btn::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 12px;
+    left: 12px;
     width: 12px;
     height: 12px;
     border: 3px solid #e91e63;
     border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all .3s;
 }
 
 .menu2-btn::after {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 12px;
+    right: 12px;
     width: 12px;
     height: 12px;
     border: 3px solid #e91e63;
     border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all .3s;
 }
 
-.menu2-btn:hover::before,
+.menu2-btn:hover::before {
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
 .menu2-btn:hover::after {
-    transform: scaleX(1);
+    opacity: 1;
+    top: -8px;
+    right: -8px;
 }
 
 
