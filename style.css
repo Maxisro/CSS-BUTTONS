@@ -2238,11 +2238,11 @@ body {
     background-color: white;
 }
 
-.menu4-list {}
+.menu4-list {
+    margin: 10px auto;}
 
 .menu4-list-item {
     padding: 10px 20px;
-    margin: 10px auto;
 }
 
 .menu4-btn {
@@ -2286,6 +2286,62 @@ body {
     width: 50%;
     transform: translateX(-100%);
 }
+/* MENU-5--------------------------------------------------------------------------------------------------------- */
+
+.menu-item-5 {
+    background-color: #006266;
+}
+
+.menu5-list {}
+
+.menu5-list-item {
+    margin: 0 20px;
+    transition: .5s;
+}
+
+.menu5-btn {
+    display: block;
+    position: relative;
+    padding: 5px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .5s;
+    z-index: 2;
+}
+.menu5-list:hover .menu5-btn{
+    filter: blur(5px);
+    opacity: 0.2;
+}
+.menu5-list .menu5-btn:hover{
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(0);
+}
+.menu5-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  #ee5a24;
+    transition: all .3s;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.menu5-btn::after {
+    content: '';
+    position: absolute;
+    
+}
+
+.menu5-btn:hover::before {
+    transform: scale(1);
+}
+
+
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
