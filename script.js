@@ -1,7 +1,13 @@
 const btnEl = document.querySelectorAll(".btn");
+const menuBtnEl = document.querySelectorAll(".menu-btn");
 
-btnEl.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-    });
-});
+function preventEl(el) {
+	el.forEach((item) => {
+		item.addEventListener("click", (e) => {
+			e.preventDefault();
+		});
+	});
+}
+
+preventEl(btnEl);
+preventEl(menuBtnEl);
