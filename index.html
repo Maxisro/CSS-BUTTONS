@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>CSS Animations</title>
-	</head>
 
-	<body>
-		<div class="wrapper">
-			<header class="header">HEADER</header>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Animations</title>
+</head>
 
-			<main class="main">
-				<section class="container container-btn">
-					<h1 class="title">Buttons Effects</h1>
-					<div class="buttons-container">
-						<a class="btn button-effect-1" href="#" title="Button 1">Button</a>
-						<a class="btn button-effect-2" href="#" title="Button 2">Button</a>
-						<a class="btn button-effect-3" href="#" title="Button 3">Button</a>
-						<a class="btn button-effect-4" href="#" title="Button 4">Button</a>
-						<a class="btn button-effect-5" href="#" title="Button 5">Button</a>
-						<a class="btn button-effect-6" href="#" title="Button 6">Button</a>
-						<a class="btn button-effect-7" href="#" title="Button 7">Button</a>
-						<a class="btn button-effect-8" href="#" title="Button 8">Button</a>
-						<a class="btn button-effect-9" href="#" title="Button 9">Button</a>
-						<a class="btn button-effect-10" href="#" title="Button 10"
-							>Button</a
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header__logo">CSS Effects</a>
+                <nav class="header__menu menu">
+                    <div class="menu__body">
+                        <ul class="menu__list">
+
+                            <li class="menu__item menu8-list-item">
+                                <a data-goto=".container-btn" href="#" class="menu__link ">Buttons Effects </a>
+                            </li>
+                            <li class="menu__item menu8-list-item">
+                                <a data-goto=".container-images" href="#" class="menu__link">Images Effects</a>
+                            </li>
+                            <li class="menu__item menu8-list-item">
+                                <a data-goto=".container-menu" href="#" class="menu__link">Menu Effects</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <button class="menu__icon icon-menu" type="button">
+							<span class="icon-menu__line"></span>
+						</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="container container-btn">
+                <h1 class="title btn-title">Buttons Effects</h1>
+                <div class="buttons-container">
+                    <a class="btn button-effect-1" href="#" title="Button 1">Button</a>
+                    <a class="btn button-effect-2" href="#" title="Button 2">Button</a>
+                    <a class="btn button-effect-3" href="#" title="Button 3">Button</a>
+                    <a class="btn button-effect-4" href="#" title="Button 4">Button</a>
+                    <a class="btn button-effect-5" href="#" title="Button 5">Button</a>
+                    <a class="btn button-effect-6" href="#" title="Button 6">Button</a>
+                    <a class="btn button-effect-7" href="#" title="Button 7">Button</a>
+                    <a class="btn button-effect-8" href="#" title="Button 8">Button</a>
+                    <a class="btn button-effect-9" href="#" title="Button 9">Button</a>
+                    <a class="btn button-effect-10" href="#" title="Button 10">Button</a
 						>
 						<a class="btn button-effect-11" href="#" title="Button 11"
 							>Button</a
@@ -52,15 +76,12 @@
 						<a class="btn button-effect-18" href="#" title="Button 18"
 							>Button<span class="s18"></span
 						></a>
-						<a class="btn button-effect-19" href="#" title="Button 19"
-							>Button
+                    <a class="btn button-effect-19" href="#" title="Button 19">Button
 							<div class="wave"></div
 						></a>
-						<a class="btn button-effect-20" href="#" title="Button 20"
-							>Button<span class="s20"></span
+                    <a class="btn button-effect-20" href="#" title="Button 20">Button<span class="s20"></span
 						></a>
-						<a class="btn button-effect-21" href="#" title="Button 21"
-							>Button</a
+                    <a class="btn button-effect-21" href="#" title="Button 21">Button</a
 						>
 						<a class="btn button-effect-22" href="#" title="Button 22"
 							>Button</a
@@ -162,198 +183,172 @@
 									esse eveniet cum nostrum omnis minus debitis corrupti.
 								</p>
 								<a href="#" class="btn img7-caption-btn">read more</a>
-							</div>
-						</div>
-						<div class="image-item image-item-8" title="Image 8">
-							<img
-								class="image img8"
-								src="./img/imageEffects/audio.jpg"
-								alt="image"
-							/>
-							<div class="img8-caption">
-								<h2 class="img8-caption-title">image hover</h2>
-								<p class="img8-caption-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-									esse eveniet cum nostrum omnis minus debitis corrupti.
-								</p>
-								<a href="#" class="btn img8-caption-btn">read more</a>
-							</div>
-						</div>
-						<div class="image-item image-item-9" title="Image 9">
-							<img
-								class="image img9"
-								src="./img/imageEffects/audio.jpg"
-								alt="image"
-							/>
-							<div class="img9-caption">
-								<h2 class="img9-caption-title">image hover</h2>
-								<p class="img9-caption-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-									esse eveniet cum nostrum omnis minus debitis corrupti.
-								</p>
-								<a href="#" class="btn img9-caption-btn">read more</a>
-							</div>
-						</div>
-						<div class="image-item image-item-10" title="Image 10">
-							<img
-								class="image img10"
-								src="./img/imageEffects/audio.jpg"
-								alt="image"
-							/>
-							<div class="img10-caption">
-								<h2 class="img10-caption-title">image hover</h2>
-								<p class="img10-caption-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-									esse eveniet cum nostrum omnis minus debitis corrupti.
-								</p>
-								<a href="#" class="btn img10-caption-btn">read more</a>
-							</div>
-						</div>
-						<div class="image-item image-item-11" title="Image 11">
-							<img
-								class="image img11"
-								src="./img/imageEffects/audio.jpg"
-								alt="image"
-							/>
-							<div class="img11-caption">
-								<h2 class="img11-caption-title">image hover</h2>
-								<p class="img11-caption-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-									esse eveniet cum nostrum omnis minus debitis corrupti.
-								</p>
-								<a href="#" class="btn img11-caption-btn">read more</a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="container container-menu">
-					<h1 class="title">MENU EFFECTS</h1>
-					<div class="menu-wrapper">
-						<div class="menu-item menu-item-1" title="Menu 1">
-							<ul class="menu-list menu1-list">
-								<li class="menu-list-item menu1-list-item">
-									<a href="#" class="menu-btn menu1-btn">Home</a>
-								</li>
-								<li class="menu-list-item menu1-list-item">
-									<a href="#" class="menu-btn menu1-btn">About</a>
-								</li>
-								<li class="menu-list-item menu1-list-item">
-									<a href="#" class="menu-btn menu1-btn">Services</a>
-								</li>
-								<li class="menu-list-item menu1-list-item">
-									<a href="#" class="menu-btn menu1-btn">Portfolio</a>
-								</li>
-								<li class="menu-list-item menu1-list-item">
-									<a href="#" class="menu-btn menu1-btn">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="menu-item menu-item-2" title="Menu 2">
-							<ul class="menu-list menu2-list">
-								<li class="menu-list-item menu2-list-item">
-									<a href="#" class="menu-btn menu2-btn">Home</a>
-								</li>
-								<li class="menu-list-item menu2-list-item">
-									<a href="#" class="menu-btn menu2-btn">About</a>
-								</li>
-								<li class="menu-list-item menu2-list-item">
-									<a href="#" class="menu-btn menu2-btn">Services</a>
-								</li>
-								<li class="menu-list-item menu2-list-item">
-									<a href="#" class="menu-btn menu2-btn">Portfolio</a>
-								</li>
-								<li class="menu-list-item menu2-list-item">
-									<a href="#" class="menu-btn menu2-btn">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="menu-item menu-item-3" title="Menu 3">
-							<ul class="menu-list menu3-list">
-								<li class="menu-list-item menu3-list-item">
-									<a href="#" class="menu-btn menu3-btn"
-										>Home <span class="menu3-span"></span
+                </div>
+    </div>
+    <div class="image-item image-item-8" title="Image 8">
+        <img class="image img8" src="./img/imageEffects/audio.jpg" alt="image" />
+        <div class="img8-caption">
+            <h2 class="img8-caption-title">image hover</h2>
+            <p class="img8-caption-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse eveniet cum nostrum omnis minus debitis corrupti.
+            </p>
+            <a href="#" class="btn img8-caption-btn">read more</a>
+        </div>
+    </div>
+    <div class="image-item image-item-9" title="Image 9">
+        <img class="image img9" src="./img/imageEffects/audio.jpg" alt="image" />
+        <div class="img9-caption">
+            <h2 class="img9-caption-title">image hover</h2>
+            <p class="img9-caption-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse eveniet cum nostrum omnis minus debitis corrupti.
+            </p>
+            <a href="#" class="btn img9-caption-btn">read more</a>
+        </div>
+    </div>
+    <div class="image-item image-item-10" title="Image 10">
+        <img class="image img10" src="./img/imageEffects/audio.jpg" alt="image" />
+        <div class="img10-caption">
+            <h2 class="img10-caption-title">image hover</h2>
+            <p class="img10-caption-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse eveniet cum nostrum omnis minus debitis corrupti.
+            </p>
+            <a href="#" class="btn img10-caption-btn">read more</a>
+        </div>
+    </div>
+    <div class="image-item image-item-11" title="Image 11">
+        <img class="image img11" src="./img/imageEffects/audio.jpg" alt="image" />
+        <div class="img11-caption">
+            <h2 class="img11-caption-title">image hover</h2>
+            <p class="img11-caption-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse eveniet cum nostrum omnis minus debitis corrupti.
+            </p>
+            <a href="#" class="btn img11-caption-btn">read more</a>
+        </div>
+    </div>
+    </div>
+    </section>
+    <section class="container container-menu">
+        <h1 class="title">MENU EFFECTS</h1>
+        <div class="menu-wrapper">
+            <div class="menu-item menu-item-1" title="Menu 1">
+                <ul class="menu-list menu1-list">
+                    <li class="menu-list-item menu1-list-item">
+                        <a href="#" class="menu-btn menu1-btn">Home</a>
+                    </li>
+                    <li class="menu-list-item menu1-list-item">
+                        <a href="#" class="menu-btn menu1-btn">About</a>
+                    </li>
+                    <li class="menu-list-item menu1-list-item">
+                        <a href="#" class="menu-btn menu1-btn">Services</a>
+                    </li>
+                    <li class="menu-list-item menu1-list-item">
+                        <a href="#" class="menu-btn menu1-btn">Portfolio</a>
+                    </li>
+                    <li class="menu-list-item menu1-list-item">
+                        <a href="#" class="menu-btn menu1-btn">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-2" title="Menu 2">
+                <ul class="menu-list menu2-list">
+                    <li class="menu-list-item menu2-list-item">
+                        <a href="#" class="menu-btn menu2-btn">Home</a>
+                    </li>
+                    <li class="menu-list-item menu2-list-item">
+                        <a href="#" class="menu-btn menu2-btn">About</a>
+                    </li>
+                    <li class="menu-list-item menu2-list-item">
+                        <a href="#" class="menu-btn menu2-btn">Services</a>
+                    </li>
+                    <li class="menu-list-item menu2-list-item">
+                        <a href="#" class="menu-btn menu2-btn">Portfolio</a>
+                    </li>
+                    <li class="menu-list-item menu2-list-item">
+                        <a href="#" class="menu-btn menu2-btn">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-3" title="Menu 3">
+                <ul class="menu-list menu3-list">
+                    <li class="menu-list-item menu3-list-item">
+                        <a href="#" class="menu-btn menu3-btn">Home <span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu3-list-item">
-									<a href="#" class="menu-btn menu3-btn"
-										>About <span class="menu3-span"></span
+                    </li>
+                    <li class="menu-list-item menu3-list-item">
+                        <a href="#" class="menu-btn menu3-btn">About <span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu3-list-item">
-									<a href="#" class="menu-btn menu3-btn"
-										>Services <span class="menu3-span"></span
+                    </li>
+                    <li class="menu-list-item menu3-list-item">
+                        <a href="#" class="menu-btn menu3-btn">Services <span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu3-list-item">
-									<a href="#" class="menu-btn menu3-btn"
-										>Team <span class="menu3-span"></span
+                    </li>
+                    <li class="menu-list-item menu3-list-item">
+                        <a href="#" class="menu-btn menu3-btn">Team <span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu3-list-item">
-									<a href="#" class="menu-btn menu3-btn"
-										>Contact <span class="menu3-span"></span
+                    </li>
+                    <li class="menu-list-item menu3-list-item">
+                        <a href="#" class="menu-btn menu3-btn">Contact <span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 										><span class="menu3-span"></span
 									></a>
-								</li>
-							</ul>
-						</div>
-						<div class="menu-item menu-item-4" title="Menu 4">
-							<ul class="menu-list menu4-list">
-								<li class="menu-list-item menu4-list-item">
-									<a href="#" class="menu-btn menu4-btn">Home</a>
-								</li>
-								<li class="menu-list-item menu4-list-item">
-									<a href="#" class="menu-btn menu4-btn">About</a>
-								</li>
-								<li class="menu-list-item menu4-list-item">
-									<a href="#" class="menu-btn menu4-btn">Services</a>
-								</li>
-								<li class="menu-list-item menu4-list-item">
-									<a href="#" class="menu-btn menu4-btn">Portfolio</a>
-								</li>
-								<li class="menu-list-item menu4-list-item">
-									<a href="#" class="menu-btn menu4-btn">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="menu-item menu-item-5" title="Menu 5">
-							<ul class="menu-list menu5-list">
-								<li class="menu-list-item menu5-list-item">
-									<a href="#" class="menu-btn menu5-btn">Home</a>
-								</li>
-								<li class="menu-list-item menu5-list-item">
-									<a href="#" class="menu-btn menu5-btn">About</a>
-								</li>
-								<li class="menu-list-item menu5-list-item">
-									<a href="#" class="menu-btn menu5-btn">Services</a>
-								</li>
-								<li class="menu-list-item menu5-list-item">
-									<a href="#" class="menu-btn menu5-btn">Portfolio</a>
-								</li>
-								<li class="menu-list-item menu5-list-item">
-									<a href="#" class="menu-btn menu5-btn">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="menu-item menu-item-6" title="Menu 6">
-							<ul class="menu-list menu6-list">
-								<li class="menu-list-item menu6-list-item">
-									<a href="#" class="menu-btn menu6-btn"
-										><span class="menu6-span">Home</span
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-4" title="Menu 4">
+                <ul class="menu-list menu4-list">
+                    <li class="menu-list-item menu4-list-item">
+                        <a href="#" class="menu-btn menu4-btn">Home</a>
+                    </li>
+                    <li class="menu-list-item menu4-list-item">
+                        <a href="#" class="menu-btn menu4-btn">About</a>
+                    </li>
+                    <li class="menu-list-item menu4-list-item">
+                        <a href="#" class="menu-btn menu4-btn">Services</a>
+                    </li>
+                    <li class="menu-list-item menu4-list-item">
+                        <a href="#" class="menu-btn menu4-btn">Portfolio</a>
+                    </li>
+                    <li class="menu-list-item menu4-list-item">
+                        <a href="#" class="menu-btn menu4-btn">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-5" title="Menu 5">
+                <ul class="menu-list menu5-list">
+                    <li class="menu-list-item menu5-list-item">
+                        <a href="#" class="menu-btn menu5-btn">Home</a>
+                    </li>
+                    <li class="menu-list-item menu5-list-item">
+                        <a href="#" class="menu-btn menu5-btn">About</a>
+                    </li>
+                    <li class="menu-list-item menu5-list-item">
+                        <a href="#" class="menu-btn menu5-btn">Services</a>
+                    </li>
+                    <li class="menu-list-item menu5-list-item">
+                        <a href="#" class="menu-btn menu5-btn">Portfolio</a>
+                    </li>
+                    <li class="menu-list-item menu5-list-item">
+                        <a href="#" class="menu-btn menu5-btn">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-6" title="Menu 6">
+                <ul class="menu-list menu6-list">
+                    <li class="menu-list-item menu6-list-item">
+                        <a href="#" class="menu-btn menu6-btn"><span class="menu6-span">Home</span
 										><span class="menu6-span">Home</span></a
 									>
 								</li>
@@ -387,99 +382,93 @@
 							<ul class="menu-list menu7-list">
 								<li class="menu-list-item menu7-list-item">
 									<a href="#" class="menu-btn menu7-btn">Home</a>
-								</li>
-								<li class="menu-list-item menu7-list-item">
-									<a href="#" class="menu-btn menu7-btn">About</a>
-								</li>
-								<li class="menu-list-item menu7-list-item">
-									<a href="#" class="menu-btn menu7-btn">Services</a>
-								</li>
-								<li class="menu-list-item menu7-list-item">
-									<a href="#" class="menu-btn menu7-btn">Portfolio</a>
-								</li>
-								<li class="menu-list-item menu7-list-item">
-									<a href="#" class="menu-btn menu7-btn">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="menu-item menu-item-8" title="Menu 8">
-							<ul class="menu-list menu8-list">
-								<li class="menu-list-item menu8-list-item">
-									<a href="#" class="menu-btn menu8-btn"
-										>Home <span class="menu8-span"></span
+                    </li>
+                    <li class="menu-list-item menu7-list-item">
+                        <a href="#" class="menu-btn menu7-btn">About</a>
+                    </li>
+                    <li class="menu-list-item menu7-list-item">
+                        <a href="#" class="menu-btn menu7-btn">Services</a>
+                    </li>
+                    <li class="menu-list-item menu7-list-item">
+                        <a href="#" class="menu-btn menu7-btn">Portfolio</a>
+                    </li>
+                    <li class="menu-list-item menu7-list-item">
+                        <a href="#" class="menu-btn menu7-btn">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-8" title="Menu 8">
+                <ul class="menu-list menu8-list">
+                    <li class="menu-list-item menu8-list-item">
+                        <a href="#" class="menu-btn menu8-btn">Home <span class="menu8-span"></span><span class="menu8-span"></span></a>
+                    </li>
+                    <li class="menu-list-item menu8-list-item">
+                        <a href="#" class="menu-btn menu8-btn">About <span class="menu8-span"></span
 										><span class="menu8-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu8-list-item">
-									<a href="#" class="menu-btn menu8-btn"
-										>About <span class="menu8-span"></span
+                    </li>
+                    <li class="menu-list-item menu8-list-item">
+                        <a href="#" class="menu-btn menu8-btn">Services <span class="menu8-span"></span
 										><span class="menu8-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu8-list-item">
-									<a href="#" class="menu-btn menu8-btn"
-										>Services <span class="menu8-span"></span
+                    </li>
+                    <li class="menu-list-item menu8-list-item">
+                        <a href="#" class="menu-btn menu8-btn">Team <span class="menu8-span"></span
 										><span class="menu8-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu8-list-item">
-									<a href="#" class="menu-btn menu8-btn"
-										>Team <span class="menu8-span"></span
+                    </li>
+                    <li class="menu-list-item menu8-list-item">
+                        <a href="#" class="menu-btn menu8-btn">Contact <span class="menu8-span"></span
 										><span class="menu8-span"></span
 									></a>
-								</li>
-								<li class="menu-list-item menu8-list-item">
-									<a href="#" class="menu-btn menu8-btn"
-										>Contact <span class="menu8-span"></span
-										><span class="menu8-span"></span
-									></a>
-								</li>
-							</ul>
-						</div>
-						<div class="menu-item menu-item-9" title="Menu 9">
-							<ul class="menu-list menu9-list">
-								<li class="menu-list-item menu9-list-item">
-									<a href="#" class="menu-btn menu9-btn">Home</a>
-								</li>
-								<li class="menu-list-item menu9-list-item">
-									<a href="#" class="menu-btn menu9-btn">About</a>
-								</li>
-								<li class="menu-list-item menu9-list-item">
-									<a href="#" class="menu-btn menu9-btn">Services</a>
-								</li>
-								<li class="menu-list-item menu9-list-item">
-									<a href="#" class="menu-btn menu9-btn">Portfolio</a>
-								</li>
-								<li class="menu-list-item menu9-list-item">
-									<a href="#" class="menu-btn menu9-btn">Contact</a>
-								</li>
-							</ul>
-						</div>
-                        <div class="menu-item menu-item-10" title="Menu 10">
-							<ul class="menu-list menu10-list">
-								<li class="menu-list-item menu10-list-item">
-									<a href="#" class="menu-btn menu10-btn" data-text="Home">Home</a>
-								</li>
-								<li class="menu-list-item menu10-list-item">
-									<a href="#" class="menu-btn menu10-btn" data-text="About">About</a>
-								</li>
-								<li class="menu-list-item menu10-list-item">
-									<a href="#" class="menu-btn menu10-btn" data-text="Services">Services</a>
-								</li>
-								<li class="menu-list-item menu10-list-item">
-									<a href="#" class="menu-btn menu10-btn" data-text="Team">Team</a>
-								</li>
-								<li class="menu-list-item menu10-list-item">
-									<a href="#" class="menu-btn menu10-btn" data-text="Contact">Contact</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-			</main>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-9" title="Menu 9">
+                <ul class="menu-list menu9-list">
+                    <li class="menu-list-item menu9-list-item">
+                        <a href="#" class="menu-btn menu9-btn">Home</a>
+                    </li>
+                    <li class="menu-list-item menu9-list-item">
+                        <a href="#" class="menu-btn menu9-btn">About</a>
+                    </li>
+                    <li class="menu-list-item menu9-list-item">
+                        <a href="#" class="menu-btn menu9-btn">Services</a>
+                    </li>
+                    <li class="menu-list-item menu9-list-item">
+                        <a href="#" class="menu-btn menu9-btn">Portfolio</a>
+                    </li>
+                    <li class="menu-list-item menu9-list-item">
+                        <a href="#" class="menu-btn menu9-btn">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-item menu-item-10" title="Menu 10">
+                <ul class="menu-list menu10-list">
+                    <li class="menu-list-item menu10-list-item">
+                        <a href="#" class="menu-btn menu10-btn" data-text="Home">Home</a>
+                    </li>
+                    <li class="menu-list-item menu10-list-item">
+                        <a href="#" class="menu-btn menu10-btn" data-text="About">About</a>
+                    </li>
+                    <li class="menu-list-item menu10-list-item">
+                        <a href="#" class="menu-btn menu10-btn" data-text="Services">Services</a>
+                    </li>
+                    <li class="menu-list-item menu10-list-item">
+                        <a href="#" class="menu-btn menu10-btn" data-text="Team">Team</a>
+                    </li>
+                    <li class="menu-list-item menu10-list-item">
+                        <a href="#" class="menu-btn menu10-btn" data-text="Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
 
-			<footer class="footer">FOOTER</footer>
-		</div>
-		<script src="script.js"></script>
-	</body>
+    <footer class="footer">FOOTER</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
