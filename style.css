@@ -2854,6 +2854,53 @@ body {
     transform: translate(0.625rem, -0.625rem);
 }
 
+/* CARDS EFFECTS--------------------------------------------------------------------------------------------------------- */
+
+.container-cards {}
+
+.cards-wrapper {
+    display: grid;
+    gap: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+    /* grid-template-columns: repeat(1, minmax(290px, auto)); */
+    grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+    overflow: hidden;
+}
+
+.cards-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    min-height: 100px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.cards-list {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 841px) {
+    .cards-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+    }
+    .cards-list {
+        flex-direction: column;
+    }
+    .cards-item {
+        min-height: 300px;
+        max-width: 85%;
+        margin: 0 auto;
+    }
+}
+
+.cards-list-item {}
+
+
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
