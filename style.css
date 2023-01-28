@@ -3582,7 +3582,7 @@ body {
 /* COOL EFFECTS--------------------------------------------------------------------------------------------------------- */
 
 .container-cool {
-    min-height: 500px;
+    
 }
 
 .cool-wrapper {
@@ -3590,6 +3590,7 @@ body {
     column-gap: 10px;
     row-gap: 20px;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     /* padding-top: 50px; */
 }
@@ -3859,6 +3860,32 @@ body {
     transform: scaleY(1);
     transition-delay: 1.5s;
 }
+
+/* CSS ANIMATIONS--------------------------------------------------------------------------------------------------------- */
+
+.container-animations {
+    
+}
+
+.animations-wrapper {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.animations-item {
+    color: black;
+}
+
+.animations-btn {}
+
+
+/* Animation-1--------------------------------------------------------------------------------------------------------- */
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
