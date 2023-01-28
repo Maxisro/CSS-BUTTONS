@@ -255,7 +255,7 @@ body {
     text-align: center;
     padding-top: 1.875rem;
     margin-bottom: calc(15px + (50 - 20) * ((100vw - 320px) / (1440 - 320)));
-    color: #dac924;
+    color: yellow;
     text-transform: uppercase;
 }
 
@@ -2206,7 +2206,7 @@ body {
     min-height: 100px;
     border-radius: 4px;
     margin: 0 auto;
-   
+
 
 }
 
@@ -3581,9 +3581,7 @@ body {
 
 /* COOL EFFECTS--------------------------------------------------------------------------------------------------------- */
 
-.container-cool {
-    
-}
+.container-cool {}
 
 .cool-wrapper {
     display: flex;
@@ -3612,7 +3610,7 @@ body {
 }
 
 .cool1-list-item {
-   
+
     color: white;
     font-size: calc(70px + (100 - 70) * ((100vw - 320px) / (1440 - 320)));
     font-family: serif;
@@ -3761,9 +3759,10 @@ body {
         top: -10%;
     }
 }
+
 /* Cool-4---------------------------------------------------------------------------------------------------------- */
-.cool-item-4 {
-}
+.cool-item-4 {}
+
 .cool4-box {
     position: relative;
     width: 150px;
@@ -3772,23 +3771,25 @@ body {
 }
 
 .cool4-text {
-    color:white;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.2em;
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
 }
+
 .cool4-span {
     color: #58c747;
     font-size: 25px;
 }
-.cool4-box::before{
+
+.cool4-box::before {
     content: '';
     position: absolute;
     top: 0;
@@ -3800,10 +3801,12 @@ body {
     transition: .5s;
     transform: scaleX(0);
 }
-.cool4-box:hover::before{
+
+.cool4-box:hover::before {
     transform: scaleX(1);
 }
-.cool4-box::after{
+
+.cool4-box::after {
     content: '';
     position: absolute;
     top: 0;
@@ -3815,7 +3818,8 @@ body {
     transition: .5s;
     transform: scaley(0);
 }
-.cool4-box:hover::after{
+
+.cool4-box:hover::after {
     transform: scaleY(1);
     transition-delay: .5s;
 }
@@ -3828,7 +3832,8 @@ body {
     /* background-color:yellow; */
     transform: rotate(45deg);
 }
-.cool4-rotated::before{
+
+.cool4-rotated::before {
     content: '';
     position: absolute;
     top: 0;
@@ -3840,11 +3845,13 @@ body {
     transition: .5s;
     transform: scaleX(0);
 }
-.cool4-box:hover .cool4-rotated::before{
+
+.cool4-box:hover .cool4-rotated::before {
     transform: scaleX(1);
     transition-delay: 1s;
 }
-.cool4-rotated::after{
+
+.cool4-rotated::after {
     content: '';
     position: absolute;
     top: 0;
@@ -3856,16 +3863,15 @@ body {
     transition: .5s;
     transform: scaley(0);
 }
-.cool4-box:hover .cool4-rotated::after{
+
+.cool4-box:hover .cool4-rotated::after {
     transform: scaleY(1);
     transition-delay: 1.5s;
 }
 
 /* CSS ANIMATIONS--------------------------------------------------------------------------------------------------------- */
 
-.container-animations {
-    
-}
+.container-animations {}
 
 .animations-wrapper {
     display: flex;
@@ -3884,7 +3890,50 @@ body {
 
 
 /* Animation-1--------------------------------------------------------------------------------------------------------- */
+.animation-item-1 {}
 
+.anim1-text {
+    text-align: center;
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: calc(50px + (90 - 50) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: bold;
+    line-height: calc(70px + (90 - 70) * ((100vw - 320px) / (1440 - 320)));
+    letter-spacing: calc(5px + (15 - 5) * ((100vw - 320px) / (1440 - 320)));
+    text-shadow: 0 1px 0 #58c747a6, 0 2px 0 #58c747a6, 0 3px 0 #58c747a6, 0 4px 0 #58c747a6, 0 30px 5px #58c7473e;
+    animation: anim1-float 3s linear infinite alternate;
+}
+
+@keyframes anim1-float {
+    from{ transform: rotate(5deg);}
+    to{ transform: rotate(-5deg);}
+}
+/* Animation-2--------------------------------------------------------------------------------------------------------- */
+.animation-item-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 200px;
+}
+.anim2-loading {
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border-radius:20px;
+    animation: anim2-loading 4s linear infinite ;
+}
+
+@keyframes anim2-loading {
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+    100%{
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+}
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
