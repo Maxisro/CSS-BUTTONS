@@ -3576,8 +3576,6 @@ body {
 
 /* Cool-1--------------------------------------------------------------------------------------------------------- */
 
-.cool-item-1 {
-}
 .cool1-list {
     display: flex;
     
@@ -3613,6 +3611,37 @@ body {
     .cool1-list-item:nth-child(5){
         transition-delay: 1.6s;
     }
+    /* Cool-2---------------------------------------------------------------------------------------------------------- */
+    .cool-item-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cool2-title {
+        font-family: Verdana;
+        font-size:calc(70px + (120 - 70) * ((100vw - 320px) / (1440 - 320)));
+        font-weight: 700;
+        color: #ccc;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .cool2-title::before{
+        content: 'text';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        color:#262626;
+        overflow: hidden;
+        transition: all .8s;
+        opacity: 0;
+    }
+    .cool2-title:hover::before{
+        width: 100%;
+        opacity: 1;
+    }
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
