@@ -3875,8 +3875,8 @@ body {
 
 .animations-wrapper {
     display: flex;
-    column-gap: 10px;
-    row-gap: 20px;
+    column-gap: 30px;
+    row-gap: 30px;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
@@ -3959,12 +3959,14 @@ body {
     animation: anim3-driving 30s linear infinite;
     position: relative;
 }
+
 .anim3-car {
     position: absolute;
     left: 40%;
     bottom: -15px;
     width: 150px;
 }
+
 .anim3-motorbike {
     position: absolute;
     left: 5%;
@@ -3976,11 +3978,51 @@ body {
     from {
         background-position: bottom left;
     }
+
     to {
         background-position: bottom right;
     }
 }
 
+/* Animation-3--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-4 {
+}
+.anim4-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(290px + (1000 - 290) * ((100vw - 320px) / (1440 - 320)));
+    max-height: 200px;
+    background-color:#ea2027;
+    font-weight: bold;
+    font-size: calc(20px + (70 - 20) * ((100vw - 320px) / (1440 - 320)));
+    color: white;
+    padding: 10px;
+
+}
+
+.anim4-span::before {
+    content: 'TRANSITIONS';
+    text-transform: uppercase;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #1b1464;
+    animation: anim4-words 6s infinite;
+    
+}
+@keyframes anim4-words {
+    0%{
+        content:'transitions';
+    }
+    50%{
+        content:'animations';
+        color:yellow;
+    }
+    100%{
+        content:'transforms';
+        color:green;
+    }
+}
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
