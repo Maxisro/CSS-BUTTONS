@@ -3949,8 +3949,7 @@ body {
 
 .anim3-background {
     width: calc(290px + (500 - 290) * ((100vw - 320px) / (1440 - 320)));
-    /* height: 100vh;
-    height: 100dvh; */
+
     height: 500px;
 
     background: url(./img/animations/bg.jpg);
@@ -4287,38 +4286,78 @@ body {
 
 .anim10-list {
     display: flex;
-   border-bottom:10px solid white;
+    border-bottom: 10px solid white;
 }
 
 .anim10-list-item {
     width: 30px;
     height: 30px;
-    background-color:white;
+    background-color: white;
     margin: 0 10px;
     border-radius: 50%;
     animation: anim10-jumping 1s linear infinite;
 }
 
 @keyframes anim10-jumping {
-    0%{transform: translateY(0);}
-    50%{transform: translateY(-150px);}
-    100%{transform: translateY(0px);}
-    
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-150px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
 }
-.anim10-list-item:nth-child(1){
+
+.anim10-list-item:nth-child(1) {
     animation-delay: 0.45s;
 }
-.anim10-list-item:nth-child(2){
+
+.anim10-list-item:nth-child(2) {
     animation-delay: 0.6s;
 }
-.anim10-list-item:nth-child(3){
+
+.anim10-list-item:nth-child(3) {
     animation-delay: 0.3s;
 }
-.anim10-list-item:nth-child(4){
+
+.anim10-list-item:nth-child(4) {
     animation-delay: 0.45s;
 }
-.anim10-list-item:nth-child(5){
+
+.anim10-list-item:nth-child(5) {
     animation-delay: 0.8s;
+}
+
+/*Animation-11--------------------------------------------------------------------------------------------------------- */
+.animation-item-11 {
+    width: calc(290px + (500 - 290) * ((100vw - 320px) / (1440 - 320)));
+    height: 500px;
+    background: url(./img/animations/castle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.anim11-background {
+    background: url(./img/animations/rain.png);
+    height: 100%;
+    animation: anim11-rain .3s linear infinite;
+}
+
+@keyframes anim11-rain {
+    0% {
+        background-position: 0 0
+    }
+
+   
+
+    100% {
+        background-position: 20% 100%
+    }
 }
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
