@@ -3905,9 +3905,15 @@ body {
 }
 
 @keyframes anim1-float {
-    from{ transform: rotate(5deg);}
-    to{ transform: rotate(-5deg);}
+    from {
+        transform: rotate(5deg);
+    }
+
+    to {
+        transform: rotate(-5deg);
+    }
 }
+
 /* Animation-2--------------------------------------------------------------------------------------------------------- */
 .animation-item-2 {
     display: flex;
@@ -3915,25 +3921,66 @@ body {
     align-items: center;
     perspective: 200px;
 }
+
 .anim2-loading {
     width: 100px;
     height: 100px;
-    background-color:white;
-    border-radius:20px;
-    animation: anim2-loading 4s linear infinite ;
+    background-color: white;
+    border-radius: 20px;
+    animation: anim2-loading 4s linear infinite;
 }
 
 @keyframes anim2-loading {
-    0%{
+    0% {
         transform: rotateX(0deg) rotateY(0deg);
     }
-    50%{
+
+    50% {
         transform: rotateX(0deg) rotateY(180deg);
     }
-    100%{
+
+    100% {
         transform: rotateX(180deg) rotateY(180deg);
     }
 }
+
+/* Animation-3--------------------------------------------------------------------------------------------------------- */
+.animation-item-3 {}
+
+.anim3-background {
+    width: calc(290px + (500 - 290) * ((100vw - 320px) / (1440 - 320)));
+    /* height: 100vh;
+    height: 100dvh; */
+    height: 500px;
+
+    background: url(./img/animations/bg.jpg);
+    background-position: bottom left;
+    background-size: cover;
+    animation: anim3-driving 30s linear infinite;
+    position: relative;
+}
+.anim3-car {
+    position: absolute;
+    left: 40%;
+    bottom: -15px;
+    width: 150px;
+}
+.anim3-motorbike {
+    position: absolute;
+    left: 5%;
+    bottom: 10px;
+    width: 100px;
+}
+
+@keyframes anim3-driving {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: bottom right;
+    }
+}
+
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
