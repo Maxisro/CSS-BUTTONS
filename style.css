@@ -4026,17 +4026,20 @@ body {
         color: green;
     }
 }
+
 @keyframes anim4-animated-pattern {
     from {
         background-position: 0 0;
     }
+
     to {
         background-position: 800px 600px;
     }
 }
+
 /* Animation-5--------------------------------------------------------------------------------------------------------- */
-.animation-item-5 {
-}
+.animation-item-5 {}
+
 .anim5-btn {
     font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1440 - 320)));
     border: 3px solid white;
@@ -4045,25 +4048,30 @@ body {
     transition: all .3s;
     text-transform: capitalize;
 }
-.anim5-btn:hover{
+
+.anim5-btn:hover {
     border: 3px solid #f44336;
     color: #f44336;
     animation: anim5-shake .3s linear 1;
 }
-@keyframes anim5-shake{
-    33%{
+
+@keyframes anim5-shake {
+    33% {
         transform: rotate(10deg);
     }
-    66%{
+
+    66% {
         transform: rotate(-10deg);
     }
-    100%{
+
+    100% {
         transform: rotate(10deg);
     }
 }
+
 /* Animation-6--------------------------------------------------------------------------------------------------------- */
-.animation-item-6 {
-}
+.animation-item-6 {}
+
 .anim6-btn {
     font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1440 - 320)));
     border: 3px solid white;
@@ -4073,8 +4081,9 @@ body {
     position: relative;
     transition: all .6;
 }
-.anim6-btn::before{
-    content:'';
+
+.anim6-btn::before {
+    content: '';
     position: absolute;
     background-color: #f44336;
     top: 0;
@@ -4084,16 +4093,25 @@ body {
     transform: skewX(-15deg);
     z-index: -1;
     animation: anim5-backMove 2s linear infinite;
-    
+
 }
-.anim6-btn:hover::before{
+
+.anim6-btn:hover::before {
     width: 100%;
     transform: skewX(0deg);
     animation: none;
 }
-@keyframes anim5-backMove{
-  from{left: 0;}
-  to{left: 100%;}
+
+@keyframes anim5-backMove {
+    from {
+        left: -25%;
+        opacity: 1;
+    }
+
+    to {
+        left: 100%;
+        opacity: 0;
+    }
 }
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
