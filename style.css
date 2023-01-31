@@ -4247,6 +4247,29 @@ body {
 
 }
 
+/* Animation-9--------------------------------------------------------------------------------------------------------- */
+.animation-item-9 {
+}
+.anim9-text {
+    color: transparent;
+    font-size: calc(50px + (200 - 70) * ((100vw - 320px) / (1440 - 320)));
+    font-family: Inconsolata, sans-serif;
+    font-weight: bold;
+    letter-spacing: calc(5px + (15 - 5) * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    background:url(./img/animations/textBG.jpg);
+    -webkit-background-clip: text;
+    animation: anim9-text 20s linear infinite;
+}
+@keyframes anim9-text {
+    from{
+        background-position: 0 0
+    }
+    to{
+        background-position: 100% 100%
+    }
+}
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
