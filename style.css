@@ -4038,10 +4038,10 @@ body {
 .animation-item-5 {
 }
 .anim5-btn {
-    font-size: 40px;
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1440 - 320)));
     border: 3px solid white;
     border-radius: 0%;
-    padding: 40px 80px;
+    padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))) calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
     transition: all .3s;
     text-transform: capitalize;
 }
@@ -4060,6 +4060,40 @@ body {
     100%{
         transform: rotate(10deg);
     }
+}
+/* Animation-6--------------------------------------------------------------------------------------------------------- */
+.animation-item-6 {
+}
+.anim6-btn {
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1440 - 320)));
+    border: 3px solid white;
+    border-radius: 0%;
+    padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))) calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
+    text-transform: capitalize;
+    position: relative;
+    transition: all .6;
+}
+.anim6-btn::before{
+    content:'';
+    position: absolute;
+    background-color: #f44336;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    transform: skewX(-15deg);
+    z-index: -1;
+    animation: anim5-backMove 2s linear infinite;
+    
+}
+.anim6-btn:hover::before{
+    width: 100%;
+    transform: skewX(0deg);
+    animation: none;
+}
+@keyframes anim5-backMove{
+  from{left: 0;}
+  to{left: 100%;}
 }
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
