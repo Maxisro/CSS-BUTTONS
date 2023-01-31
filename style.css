@@ -4114,6 +4114,63 @@ body {
     }
 }
 
+/* Animation-7--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-7 {
+}
+.anim7-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anim7-list-item {
+    color: #484848;
+    font-size: calc(50px + (100 - 70) * ((100vw - 320px) / (1440 - 320)));
+    font-family: Inconsolata, sans-serif;
+    font-weight: bold;
+    letter-spacing: calc(5px + (15 - 5) * ((100vw - 320px) / (1440 - 320)));
+    transition: .3s;
+    animation: anim7-lighting 1.4s linear infinite;
+}
+
+@keyframes anim7-lighting{
+    0%{
+        color: #484848;
+        text-shadow: none;
+    }
+    90%{
+        color: #484848;
+        text-shadow: none;
+    }
+    100%{
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+    }
+}
+.anim7-list-item:nth-child(1){
+    animation-delay: 0;
+}
+.anim7-list-item:nth-child(2){
+    animation-delay: 0.1s;
+}
+.anim7-list-item:nth-child(3){
+    animation-delay: 0.2s;
+}
+.anim7-list-item:nth-child(4){
+    animation-delay: 0.3s;
+}
+.anim7-list-item:nth-child(5){
+    animation-delay: 0.4s;
+}
+.anim7-list-item:nth-child(6){
+    animation-delay: 0.5s;
+}
+.anim7-list-item:nth-child(7){
+    animation-delay: 0.6s;
+}
+.anim7-list-item:nth-child(8){
+    animation-delay: 0.7s;
+}
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
