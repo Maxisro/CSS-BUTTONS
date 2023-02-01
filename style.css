@@ -4489,10 +4489,16 @@ body {
 
     }
 
-    100% {
+    80% {
         color: blue ;
         transform: translateX(50px);
         letter-spacing: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+        opacity: 0;
+    }
+    100% {
+        color: red;
+        transform: translateX(-50px);
+        letter-spacing: calc(1px + (20 - 1) * ((100vw - 320px) / (1440 - 320)));
         opacity: 0;
     }
 }
@@ -4562,6 +4568,76 @@ body {
     100%{
         transform: scale(1.2);
         opacity: 0;
+    }
+}
+/*Animation-15--------------------------------------------------------------------------------------------------------- */
+.animation-item-15 {
+    /* display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 320px; */
+    margin: 0 30px;
+}
+
+.anim15-cradle {
+    display: flex;
+    border-top: 10px solid white;
+}
+
+.anim15-cradle-item {
+    display: block;
+    width: 3px;
+    height: 150px;
+    background-color: white;
+    margin: 0 14px;
+    position: relative;
+    transform-origin: top;
+
+}
+.anim15-cradle-item::before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:white;
+    transform: translateX(-50%);
+}
+.anim15-cradle-item:first-child{
+    animation: anim15-left 2s ease-in infinite;
+}
+.anim15-cradle-item:last-child{
+    animation: anim15-right 2s ease-in infinite 1s;
+    
+}
+@keyframes anim15-left {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes anim15-right {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
     }
 }
 
