@@ -4518,6 +4518,52 @@ body {
     animation-delay: 1.2s;
 }
 
+/*Animation-14--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-14 {
+   
+}
+.anim14-pulse {
+    width: 100px;
+    height: 100px;
+    background-color:#58ea00;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    position: relative;
+}
+.anim14-pulse::before,
+.anim14-pulse::after{
+    content:'';
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 1px solid #58ea00;
+    border-radius: 50%;
+    animation: anim-14-pulsing 1.5s linear infinite;
+}
+.anim14-pulse::after{
+    animation-delay: .5s;
+}
+@keyframes anim-14-pulsing {
+    0%{
+        transform: scale(.5);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
