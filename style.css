@@ -4833,6 +4833,40 @@ body {
         left: 0%;
     }
 }
+/*Animation-18--------------------------------------------------------------------------------------------------------- */
+.animation-item-18 {
+}
+.anim18-text {
+    font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1440 - 320)));
+    letter-spacing: calc(1px + (20 - 1) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: bold;
+    text-transform: uppercase;
+    color:white;
+    position: relative;
+}
+.anim18-text::before{
+    content:'loading..';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #f6b93b;
+    overflow: hidden;
+    border-right: 4px solid #f6b93b;
+    animation: anim18-animate 5s linear infinite;
+}
+
+@keyframes anim18-animate {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
