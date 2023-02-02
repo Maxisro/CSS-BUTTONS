@@ -5092,6 +5092,67 @@ body {
 }
 
 
+/*Animation-24--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-24 {}
+
+.anim24-loading {
+    width: 70px;
+    display: flex;
+    column-gap: 1px;
+}
+
+.anim24-obg {
+    width: 10px;
+    height: 60px;
+    background-color: white;
+    animation: anim24-loader .8s ease-in-out infinite
+}
+
+.anim24-obg:nth-child(1) {
+    background-color: #2eeca8;
+    animation-delay: .2s;
+}
+
+.anim24-obg:nth-child(2) {
+    background-color: #eade3d;
+    animation-delay: .3s;
+}
+
+.anim24-obg:nth-child(3) {
+    background-color: #ea55acee;
+    animation-delay: .4s;
+}
+
+.anim24-obg:nth-child(4) {
+    background-color: #ec902e;
+    animation-delay: .5s;
+}
+
+.anim24-obg:nth-child(5) {
+    background-color: #09b7bf;
+    animation-delay: .6s;
+}
+
+.anim24-obg:nth-child(6) {
+    background-color: #ea3d8c;
+    animation-delay: .7s;
+}
+
+@keyframes anim24-loader {
+    0% {
+        transform: scaleY(0.1);
+    }
+    35% {
+        transform: scaleY(1);
+    }
+    60%,
+    100% {
+        transform: scaleY(.1);
+    }
+}
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
