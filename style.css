@@ -4785,14 +4785,17 @@ body {
     height: 50px;
     background: white;
     border-radius: 4px;
-    animation:anim17-chase 2s linear infinite;
+    animation: anim17-chase 2s linear infinite;
 }
-.anim17-span:nth-child(2){
+
+.anim17-span:nth-child(2) {
     animation-delay: .7s;
 }
-.anim17-span:nth-child(3){
+
+.anim17-span:nth-child(3) {
     animation-delay: 1.4s;
 }
+
 @keyframes anim17-chase {
     0% {
         top: 0;
@@ -4808,44 +4811,52 @@ body {
         top: 0;
         left: 50%;
     }
+
     37.5% {
         top: 50%;
         left: 50%;
     }
+
     50% {
         top: 50%;
         left: 50%;
     }
+
     62.5% {
         top: 50%;
         left: 0%;
     }
+
     75% {
         top: 50%;
         left: 0%;
     }
+
     87.5% {
         top: 0%;
         left: 0%;
     }
+
     100% {
         top: 0%;
         left: 0%;
     }
 }
+
 /*Animation-18--------------------------------------------------------------------------------------------------------- */
-.animation-item-18 {
-}
+.animation-item-18 {}
+
 .anim18-text {
     font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1440 - 320)));
     letter-spacing: calc(1px + (20 - 1) * ((100vw - 320px) / (1440 - 320)));
     font-weight: bold;
     text-transform: uppercase;
-    color:white;
+    color: white;
     position: relative;
 }
-.anim18-text::before{
-    content:'loading..';
+
+.anim18-text::before {
+    content: 'loading..';
     position: absolute;
     top: 0;
     left: 0;
@@ -4857,14 +4868,68 @@ body {
 }
 
 @keyframes anim18-animate {
-    0%{
+    0% {
         width: 0;
     }
-    50%{
+
+    50% {
         width: 100%;
     }
-    100%{
+
+    100% {
         width: 0;
+    }
+}
+
+/*Animation-19--------------------------------------------------------------------------------------------------------- */
+.animation-item-19 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim19-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+
+}
+
+.anim19-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 200px;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.anim19-ring {
+    width: 100%;
+    height: 100%;
+    border-left: 4px solid white;
+    border-radius: 50%;
+    animation: anim19-rotate 2s linear infinite;
+}
+
+@keyframes anim19-rotate {
+    0% {
+        transform: rotate(0);
+        border-left: 4px solid blue;
+    }
+
+    50% {
+        /* transform: rotate(360deg); */
+        border-left: 4px solid red;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-left: 4px solid blue;
     }
 }
 
