@@ -5038,6 +5038,60 @@ body {
 }
 
 
+/*Animation-23--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-23 {}
+
+.anim23-loader {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.anim23-span {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.anim23-span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: anim23-loader 1s linear infinite;
+}
+
+.anim23-s4::before,
+.anim23-s5::before,
+.anim23-s6::before {
+    animation-delay: .1s;
+}
+
+.anim23-s7::before,
+.anim23-s8::before,
+.anim23-s9::before {
+    animation-delay: .2s;
+}
+
+@keyframes anim23-loader {
+    0% {
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        width: 0%;
+        height: 0%;
+    }
+}
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
