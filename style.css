@@ -3853,8 +3853,8 @@ body {
 
 .animations-wrapper {
     display: flex;
-    column-gap: 10px;
-    row-gap: 20px;
+    column-gap: 30px;
+    row-gap: 30px;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
@@ -3887,12 +3887,19 @@ body {
     from {
         transform: rotate(5deg);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8081b1ab24dc8c2b4be42a9d6b00f3844b4422bb
     to {
         transform: rotate(-5deg);
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8081b1ab24dc8c2b4be42a9d6b00f3844b4422bb
 /* Animation-2--------------------------------------------------------------------------------------------------------- */
 
 .animation-item-2 {
@@ -3914,14 +3921,1013 @@ body {
     0% {
         transform: rotateX(0deg) rotateY(0deg);
     }
+<<<<<<< HEAD
     50% {
         transform: rotateX(0deg) rotateY(180deg);
     }
+=======
+
+    50% {
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+
+>>>>>>> 8081b1ab24dc8c2b4be42a9d6b00f3844b4422bb
     100% {
         transform: rotateX(180deg) rotateY(180deg);
     }
 }
 
+<<<<<<< HEAD
+=======
+/* Animation-3--------------------------------------------------------------------------------------------------------- */
+.animation-item-3 {}
+
+.anim3-background {
+    width: calc(290px + (500 - 290) * ((100vw - 320px) / (1440 - 320)));
+
+    height: 500px;
+
+    background: url(./img/animations/bg.jpg);
+    background-position: bottom left;
+    background-size: cover;
+    animation: anim3-driving 30s linear infinite;
+    position: relative;
+}
+
+.anim3-car {
+    position: absolute;
+    left: 40%;
+    bottom: -15px;
+    width: 150px;
+}
+
+.anim3-motorbike {
+    position: absolute;
+    left: 5%;
+    bottom: 10px;
+    width: 100px;
+}
+
+@keyframes anim3-driving {
+    from {
+        background-position: bottom left;
+    }
+
+    to {
+        background-position: bottom right;
+    }
+}
+
+/* Animation-4--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-4 {}
+
+.anim4-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(290px + (1000 - 290) * ((100vw - 320px) / (1440 - 320)));
+    height: calc(100px + (200 - 100) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: bold;
+    font-size: calc(20px + (70 - 20) * ((100vw - 320px) / (1440 - 320)));
+    color: white;
+    background: url(./img//animations/cake.png);
+    background-position: 0 0;
+    animation: anim4-animated-pattern 15s linear infinite;
+}
+
+.anim4-span::before {
+    content: 'TRANSITIONS';
+    text-transform: uppercase;
+    color: #1b1464;
+    font-weight: 700;
+    animation: anim4-words 10s linear infinite;
+
+}
+
+@keyframes anim4-words {
+    0% {
+        content: 'transitions';
+    }
+
+    50% {
+        content: 'animations';
+        color: yellow;
+    }
+
+    100% {
+        content: 'transforms';
+        color: green;
+    }
+}
+
+@keyframes anim4-animated-pattern {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 800px 600px;
+    }
+}
+
+/* Animation-5--------------------------------------------------------------------------------------------------------- */
+.animation-item-5 {}
+
+.anim5-btn {
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1440 - 320)));
+    border: 3px solid white;
+    border-radius: 0%;
+    padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))) calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
+    transition: all .3s;
+    text-transform: capitalize;
+}
+
+.anim5-btn:hover {
+    border: 3px solid #f44336;
+    color: #f44336;
+    animation: anim5-shake .3s linear 1;
+}
+
+@keyframes anim5-shake {
+    33% {
+        transform: rotate(10deg);
+    }
+
+    66% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Animation-6--------------------------------------------------------------------------------------------------------- */
+.animation-item-6 {}
+
+.anim6-btn {
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1440 - 320)));
+    border: 3px solid white;
+    border-radius: 0%;
+    padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320))) calc(40px + (80 - 40) * ((100vw - 320px) / (1440 - 320)));
+    text-transform: capitalize;
+    position: relative;
+    transition: all .6;
+}
+
+.anim6-btn::before {
+    content: '';
+    position: absolute;
+    background-color: #f44336;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    transform: skewX(-15deg);
+    z-index: -1;
+    animation: anim5-backMove 2s linear infinite;
+
+}
+
+.anim6-btn:hover::before {
+    width: 100%;
+    transform: skewX(0deg);
+    animation: none;
+}
+
+@keyframes anim5-backMove {
+    from {
+        left: -25%;
+        opacity: 1;
+    }
+
+    to {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* Animation-7--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-7 {}
+
+.anim7-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim7-list-item {
+    color: #484848;
+    font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1440 - 320)));
+    font-family: Inconsolata, sans-serif;
+    font-weight: bold;
+    letter-spacing: calc(5px + (15 - 5) * ((100vw - 320px) / (1440 - 320)));
+    transition: .3s;
+    animation: anim7-lighting 1.4s linear infinite;
+}
+
+@keyframes anim7-lighting {
+    0% {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    90% {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+    }
+}
+
+.anim7-list-item:nth-child(1) {
+    animation-delay: 0;
+}
+
+.anim7-list-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.anim7-list-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.anim7-list-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.anim7-list-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.anim7-list-item:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.anim7-list-item:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.anim7-list-item:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+/* Animation-8--------------------------------------------------------------------------------------------------------- */
+.animation-item-8 {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim8 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #ff3838;
+    transform: rotate(45deg);
+    animation: anim8-heart 1.4s linear infinite;
+}
+
+.anim8::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.anim8::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes anim8-heart {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    30% {
+        transform: rotate(45deg) scale(1.3);
+    }
+
+    50% {
+        transform: rotate(45deg) scale(1.1);
+    }
+
+    70% {
+        transform: rotate(45deg) scale(1.3);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+
+}
+
+/* Animation-9--------------------------------------------------------------------------------------------------------- */
+.animation-item-9 {}
+
+.anim9-text {
+    color: transparent;
+    font-size: calc(50px + (200 - 70) * ((100vw - 320px) / (1440 - 320)));
+    font-family: Inconsolata, sans-serif;
+    font-weight: bold;
+    letter-spacing: calc(5px + (15 - 5) * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    background: url(./img/animations/textBG.jpg);
+    -webkit-background-clip: text;
+    animation: anim9-text 20s linear infinite;
+}
+
+@keyframes anim9-text {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 100% 100%
+    }
+}
+
+/* Animation-10--------------------------------------------------------------------------------------------------------- */
+.animation-item-10 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 170px;
+}
+
+.anim10-list {
+    display: flex;
+    border-bottom: 10px solid white;
+}
+
+.anim10-list-item {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin: 0 10px;
+    border-radius: 50%;
+    animation: anim10-jumping 1s linear infinite;
+}
+
+@keyframes anim10-jumping {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-150px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+.anim10-list-item:nth-child(1) {
+    animation-delay: 0.45s;
+}
+
+.anim10-list-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.anim10-list-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.anim10-list-item:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.anim10-list-item:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+/*Animation-11--------------------------------------------------------------------------------------------------------- */
+.animation-item-11 {
+    width: calc(290px + (500 - 290) * ((100vw - 320px) / (1440 - 320)));
+    height: 500px;
+    background: url(./img/animations/castle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.anim11-background {
+    background: url(./img/animations/rain.png);
+    height: 100%;
+    animation: anim11-rain .3s linear infinite;
+}
+
+@keyframes anim11-rain {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 20% 100%
+    }
+}
+
+/*Animation-12--------------------------------------------------------------------------------------------------------- */
+.animation-item-12 {}
+
+.anim12-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width:570px) {
+    .anim12-container {
+        flex-wrap: wrap;
+    }
+
+}
+
+.anim12-icon {
+    width: 120px;
+    height: 120px;
+    margin: 10px 20px;
+    border: 2px solid #0693f8;
+    border-radius: 50%;
+    transition: all .5s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anim12-icon i {
+    font-size: 48px;
+    color: #0693f8;
+    transition: all .5s;
+    z-index: 2;
+
+}
+
+.anim12-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0693f8;
+    border-radius: 50%;
+    transition: all .5s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.anim12-icon:hover::before {
+    opacity: 1;
+    transform: scale(.8);
+}
+
+.anim12-icon:hover i {
+    color: white;
+    transform: scale(.8);
+}
+
+.anim12-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: all .5s;
+    opacity: 0;
+    z-index: 1;
+    border: 2px dashed #2e86de;
+}
+
+.anim12-icon:hover::after {
+    opacity: 1;
+    animation: abin12-rotating 10s linear infinite;
+}
+
+@keyframes abin12-rotating {
+    0% {
+        transform: scale(.92) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(.92) rotate(360deg);
+    }
+}
+
+/*Animation-13--------------------------------------------------------------------------------------------------------- */
+.animation-item-13 {
+    /* min-width: 280px; */
+    width: 70%;
+}
+
+.anim13-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim13-list-item {
+    /* font-family: Inconsolata, sans-serif; */
+    font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1440 - 320)));
+    letter-spacing: calc(1px + (20 - 1) * ((100vw - 320px) / (1440 - 320)));
+    color: white;
+    font-weight: 900;
+    animation: aanim13-loading 3s linear infinite;
+}
+
+@keyframes aanim13-loading {
+    0% {
+        color: red;
+        transform: translateX(-50px);
+        letter-spacing: calc(1px + (20 - 1) * ((100vw - 320px) / (1440 - 320)));
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        letter-spacing: calc(1px + (-20 - 1) * ((100vw - 320px) / (1440 - 320)));
+        opacity: 1;
+
+    }
+
+    80% {
+        color: blue;
+        transform: translateX(50px);
+        letter-spacing: calc(10px + (20 - 10) * ((100vw - 320px) / (1440 - 320)));
+        opacity: 0;
+    }
+
+    100% {
+        color: red;
+        transform: translateX(-50px);
+        letter-spacing: calc(1px + (20 - 1) * ((100vw - 320px) / (1440 - 320)));
+        opacity: 0;
+    }
+}
+
+.anim13-list-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.anim13-list-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.anim13-list-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.anim13-list-item:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.anim13-list-item:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.anim13-list-item:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.anim13-list-item:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+/*Animation-14--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-14 {}
+
+.anim14-pulse {
+    width: 100px;
+    height: 100px;
+    background-color: #58ea00;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    position: relative;
+}
+
+.anim14-pulse::before,
+.anim14-pulse::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 1px solid #58ea00;
+    border-radius: 50%;
+    animation: anim-14-pulsing 1.5s linear infinite;
+}
+
+.anim14-pulse::after {
+    animation-delay: .5s;
+}
+
+@keyframes anim-14-pulsing {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/*Animation-15--------------------------------------------------------------------------------------------------------- */
+.animation-item-15 {
+    /* display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 320px; */
+    margin: 0 30px;
+}
+
+.anim15-cradle {
+    display: flex;
+    border-top: 10px solid white;
+}
+
+.anim15-cradle-item {
+    display: block;
+    width: 3px;
+    height: 150px;
+    background-color: white;
+    margin: 0 14px;
+    position: relative;
+    transform-origin: top;
+
+}
+
+.anim15-cradle-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+.anim15-cradle-item:first-child {
+    animation: anim15-left 2s ease-in infinite;
+}
+
+.anim15-cradle-item:last-child {
+    animation: anim15-right 2s ease-in infinite 1s;
+
+}
+
+@keyframes anim15-left {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes anim15-right {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*Animation-16--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-16 {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim16-container {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: anim16-animate 1s linear infinite;
+    transform: rotate(45deg);
+}
+
+.anim16-span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: anim16-rotate 1s linear infinite;
+}
+
+.anim16-span:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: #fceba7;
+}
+
+.anim16-span:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #55ddb9;
+}
+
+.anim16-span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background-color: #fd6c64;
+}
+
+.anim16-span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    background-color: #1f78b0;
+}
+
+@keyframes anim16-animate {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+
+    10% {
+        width: 100px;
+        height: 100px;
+    }
+
+    50% {
+        width: 150px;
+        height: 150px;
+    }
+
+    90% {
+        width: 100px;
+        height: 100px;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes anim16-rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    90% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+/*Animation-17--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-17 {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim17-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.anim17-span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 4px;
+    animation: anim17-chase 2s linear infinite;
+}
+
+.anim17-span:nth-child(2) {
+    animation-delay: .7s;
+}
+
+.anim17-span:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+@keyframes anim17-chase {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    12.5% {
+        top: 0;
+        left: 50%;
+    }
+
+    25% {
+        top: 0;
+        left: 50%;
+    }
+
+    37.5% {
+        top: 50%;
+        left: 50%;
+    }
+
+    50% {
+        top: 50%;
+        left: 50%;
+    }
+
+    62.5% {
+        top: 50%;
+        left: 0%;
+    }
+
+    75% {
+        top: 50%;
+        left: 0%;
+    }
+
+    87.5% {
+        top: 0%;
+        left: 0%;
+    }
+
+    100% {
+        top: 0%;
+        left: 0%;
+    }
+}
+
+/*Animation-18--------------------------------------------------------------------------------------------------------- */
+.animation-item-18 {}
+
+.anim18-text {
+    font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1440 - 320)));
+    letter-spacing: calc(1px + (20 - 1) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+}
+
+.anim18-text::before {
+    content: 'loading..';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #f6b93b;
+    overflow: hidden;
+    border-right: 4px solid #f6b93b;
+    animation: anim18-animate 5s linear infinite;
+}
+
+@keyframes anim18-animate {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+/*Animation-19--------------------------------------------------------------------------------------------------------- */
+.animation-item-19 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anim19-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+
+}
+
+.anim19-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 200px;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.anim19-ring {
+    width: 100%;
+    height: 100%;
+    border-left: 4px solid white;
+    border-radius: 50%;
+    animation: anim19-rotate 2s linear infinite;
+}
+
+@keyframes anim19-rotate {
+    0% {
+        transform: rotate(0);
+        border-left: 4px solid blue;
+    }
+
+    50% {
+        /* transform: rotate(360deg); */
+        border-left: 4px solid red;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-left: 4px solid blue;
+    }
+}
+>>>>>>> 8081b1ab24dc8c2b4be42a9d6b00f3844b4422bb
 
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
