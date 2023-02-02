@@ -4966,6 +4966,78 @@ body {
 }
 
 
+/*Animation-22--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-22 {}
+
+.anim22-loader {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.anim22-outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 5px solid #eb4d4b;
+    border-right: 5px solid #eb4d4b;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-radius: 50%;
+    animation: anim22-rotate 1s linear infinite;
+}
+
+.anim22-middle {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border-left: 5px solid #218c74;
+    border-right: 5px solid #218c74;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-radius: 50%;
+    animation: anim22-rotate 1s linear infinite reverse;
+}
+
+.anim22-inner {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    border-left: 5px solid #ccae62;
+    border-right: 5px solid #ccae62;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-radius: 50%;
+    animation: anim22-rotate 1s linear infinite;
+}
+
+.anim22-dot {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    right: 90px;
+    bottom: 90px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@keyframes anim22-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
