@@ -4910,6 +4910,62 @@ body {
 }
 
 
+/*Animation-21--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-21 {}
+
+.anim21-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3px;
+}
+
+.anim21-obg {
+    width: 6px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    animation: anim-21-loading .8s linear infinite;
+}
+
+.anim21-obg:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.anim21-obg:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.anim21-obg:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.anim21-obg:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.anim21-obg:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.anim21-obg:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+@keyframes anim-21-loading {
+    0% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
