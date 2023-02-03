@@ -5325,7 +5325,78 @@ body {
     }
 }
 
+/* CSS CLIP PATH--------------------------------------------------------------------------------------------------------- */
 
+.container-clip {
+    margin-top: 50px;
+}
+
+.clip-wrapper {
+    margin-top: 50px;
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.clip-item {
+    overflow: hidden;
+}
+
+.clip-btn {}
+
+
+/* Clip-1--------------------------------------------------------------------------------------------------------- */
+.clip-item-1 {
+    
+}
+.clip1-loader {
+    width: 300px;
+    height: 60px;
+    border: 7px solid #8bb1cc;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.clip1-loader span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.clip1-top-half {
+    color: #ee5253;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    animation: clip1-split 3s linear infinite;
+}
+.clip1-bottom-half {
+    color: #8bb1cc;
+    clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+    animation: clip1-split 3s linear infinite reverse;
+}
+@keyframes clip1-split {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    60%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
