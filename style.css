@@ -5308,6 +5308,7 @@ body {
 @keyframes anim26-line {
     0% {
         transform: rotate(30deg);
+        border-bottom: 4px solid red;
     }
     25% {
         transform: rotate(0deg);
@@ -5320,6 +5321,7 @@ body {
     }
     100% {
         transform: rotate(30deg);
+        border-bottom: 4px solid blue;
     }
 }
 
