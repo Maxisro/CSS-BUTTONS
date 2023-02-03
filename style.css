@@ -5503,13 +5503,13 @@ body {
 .clip2-wave {
     position: relative;
     width: calc(300px + (500 - 300) * ((100vw - 320px) / (1440 - 320)));
-    height: calc(150px + (500 - 150) * ((100vw - 320px) / (1440 - 320)));
+    height: calc(150px + (200 - 150) * ((100vw - 320px) / (1440 - 320)));
 }
 
 .clip2-text {
     position: absolute;
     text-align: center;
-    line-height: calc(150px + (500 - 150) * ((100vw - 320px) / (1440 - 320)));
+    line-height: calc(150px + (200 - 150) * ((100vw - 320px) / (1440 - 320)));
     font-size: calc(100px + (170 - 100) * ((100vw - 320px) / (1440 - 320)));
     font-weight: bold;
     text-transform: uppercase;
@@ -5522,13 +5522,13 @@ body {
 
 .clip2-text:nth-child(2) {
     color: #03a9f4;
-    animation:clip2-wave 2s ease-in-out infinite;
+    animation: clip2-wave 2s ease-in-out infinite;
 }
 
 @keyframes clip2-wave {
     0% {
         clip-path: polygon(0 38%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%);
-        
+
     }
 
     50% {
@@ -5540,6 +5540,53 @@ body {
     }
 }
 
+/* Clip-3--------------------------------------------------------------------------------------------------------- */
+.clip-item-3 {}
+
+.clip3-container {
+    position: relative;
+    width: calc(270px + (800 - 270) * ((100vw - 320px) / (1440 - 320)));
+    height: calc(200px + (500 - 200) * ((100vw - 320px) / (1440 - 320)));;
+    background-color: #222;
+    border: 10px solid white;
+}
+
+.clip3-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    
+}
+
+.clip1 {
+    background: url(./img/clip/1.jpg);
+    background-size:cover;
+    background-position: center;
+    clip-path: polygon(0% 0, 13% 0, 59% 100%, 0% 100%);
+}
+
+.clip2 {
+    background: url(./img/clip/2.jpg);
+    background-size:cover;
+    background-position: center;
+    clip-path: polygon(13% 0, 81% 0, 59% 100%, 36% 100%);
+}
+
+.clip3 {
+    background: url(./img/clip/3.jpg);
+    background-size:cover;
+    background-position: center;
+    clip-path: polygon(79% 0, 100% 0, 100% 100%, 59% 100%);
+}
+.clip3-container:hover .clip3-clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.clip3-container .clip3-clip:hover{
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+}
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
