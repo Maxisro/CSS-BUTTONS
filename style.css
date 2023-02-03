@@ -5248,6 +5248,82 @@ body {
 }
 
 
+/*Animation-26--------------------------------------------------------------------------------------------------------- */
+
+.animation-item-26 {}
+
+.anim26-line {
+    width: 280px;
+    height: 150px;
+    border-bottom: 4px solid #fff;
+    position: relative;
+    animation: anim26-line 2s linear infinite;
+}
+
+.anim26-hexagon {
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    animation: anim26-hexagon 2s linear infinite;
+}
+
+.anim26-hexagon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: rotate(60deg);
+}
+
+.anim26-hexagon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: rotate(-60deg);
+}
+
+@keyframes anim26-hexagon {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 50px);
+        transform: rotate(720deg);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes anim26-line {
+    0% {
+        transform: rotate(30deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
 .footer {
