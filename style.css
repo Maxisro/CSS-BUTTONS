@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,regular,700,900&display=swap');
 
 /* Обнуление */
 
@@ -30,12 +31,7 @@ body {
     overflow: clip;
     display: flex;
     flex-direction: column;
-    background: #0f0c29;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #201959;
 }
 
 
@@ -5586,6 +5582,47 @@ body {
 }
 .clip3-container .clip3-clip:hover{
     clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+}
+/* Clip-4--------------------------------------------------------------------------------------------------------- */
+.clip-item-4 {
+    transition: .5s;
+}
+.clip4-main {
+    position: relative;
+    width: calc(290px + (800 - 290) * ((100vw - 320px) / (1440 - 320)));
+    height: calc(200px + (500 - 200) * ((100vw - 320px) / (1440 - 320)));;
+
+}
+.clip4-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: calc(70px + (200 - 70) * ((100vw - 320px) / (1440 - 320)));
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif
+}
+.clip4-text:nth-child(1){
+    color:black;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    -webkit-text-stroke: 1px #222;
+}
+.clip4-text:nth-child(2){
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background-color:#201959;
+    transition: 0.5s;
+}
+.clip4-text:nth-child(2):hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.clip4-text:nth-child(1):hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.clip4-text:nth-child(1):hover ~ div{
+    clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
 }
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
