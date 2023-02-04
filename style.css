@@ -3788,7 +3788,6 @@ body {
 	width: 100%;
 	height: 100%;
 	display: block;
-	/* background-color:yellow; */
 	transform: rotate(45deg);
 }
 
@@ -5613,6 +5612,7 @@ body {
 	position: relative;
 	width: calc(290px + (335 - 290) * ((100vw - 320px) / (1440 - 320)));
 	height: 500px;
+	background-color:#262626;
 }
 .clip5-img {
 	position: absolute;
@@ -5625,6 +5625,7 @@ body {
 }
 .clip5-img img {
 	width: 100%;
+	height: 100%;
 }
 
 .clip5-card:hover .clip5-img {
