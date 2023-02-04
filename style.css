@@ -5585,12 +5585,12 @@ body {
 }
 /* Clip-4--------------------------------------------------------------------------------------------------------- */
 .clip-item-4 {
-    transition: .5s;
+    color:black;
 }
 .clip4-main {
     position: relative;
     width: calc(290px + (800 - 290) * ((100vw - 320px) / (1440 - 320)));
-    height: calc(200px + (500 - 200) * ((100vw - 320px) / (1440 - 320)));;
+    height: calc(150px + (300 - 150) * ((100vw - 320px) / (1440 - 320)));;
 
 }
 .clip4-text {
@@ -5603,17 +5603,14 @@ body {
     font-size: calc(70px + (200 - 70) * ((100vw - 320px) / (1440 - 320)));
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif
-}
-.clip4-text:nth-child(1){
-    color:black;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    -webkit-text-stroke: 1px #222;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 .clip4-text:nth-child(2){
+    color:white;
     clip-path: polygon(100% 0, 0% 100%, 0 0);
     background-color:#201959;
-    transition: 0.5s;
+    transition: all .5s;
 }
 .clip4-text:nth-child(2):hover{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -5623,6 +5620,74 @@ body {
 }
 .clip4-text:nth-child(1):hover ~ div{
     clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+}
+
+/* Clip-5--------------------------------------------------------------------------------------------------------- */
+.clip-item-5 {
+}
+.clip5-card {
+    position: relative;
+    width: calc(290px + (335 - 290) * ((100vw - 320px) / (1440 - 320)));
+    height: 500px;
+}
+.clip5-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    clip-path: circle(70.7% at 50% 50%);
+}
+.clip5-img img{
+    width: 100%;
+}
+
+.clip5-card:hover .clip5-img{
+    clip-path: circle(18.1% at 50% 38%);
+}
+.clip5-content {
+    position: absolute;
+    left: 0;
+    bottom:15%;
+    text-align: center;
+}
+.clip5-title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.clip5-text {
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.clip5-btn {
+    display: inline-block;
+    background-color: black;
+    color:white;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border-radius: 0;
+    border: none;
+    font-size: 16px;
+    letter-spacing: normal;
+    font-weight: normal;
+}
+.clip5-title,
+.clip5-text,
+.clip5-btn{
+    opacity: 0;
+    transition: .3s;
+    transform: translateY(30px);
+}
+.clip5-card:hover .clip5-title,
+.clip5-card:hover .clip5-text,
+.clip5-card:hover .clip5-btn{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .5s;
 }
 /*FOOTER--------------------------------------------------------------------------------------------------------- */
 
